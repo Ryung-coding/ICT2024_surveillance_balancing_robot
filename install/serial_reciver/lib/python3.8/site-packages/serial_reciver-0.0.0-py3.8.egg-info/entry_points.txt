@@ -1,0 +1,4 @@
+[console_scripts]
+reciver_cheak_node = serial_reciver.reciver_cheak:main
+serial_reciver_node = serial_reciver.serial_reciver_node:main
+
