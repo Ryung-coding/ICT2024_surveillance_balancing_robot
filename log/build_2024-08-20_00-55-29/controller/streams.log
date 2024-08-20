@@ -1,0 +1,2 @@
+[0.075s] Invoking command in '/home/ionia/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ionia/Desktop/dubal_ws/build/controller -- -j4 -l4
+[0.816s] [100%] Built target controller_main

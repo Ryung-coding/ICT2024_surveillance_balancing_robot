@@ -1,0 +1,32 @@
+[2.656s] Invoking command in '/home/ionia/Desktop/dubal_ws/src/odrive_controller': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ionia/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed install_data
+[3.276s] running egg_info
+[3.278s] creating ../../build/odrive_controller/odrive_controller.egg-info
+[3.280s] writing ../../build/odrive_controller/odrive_controller.egg-info/PKG-INFO
+[3.284s] writing dependency_links to ../../build/odrive_controller/odrive_controller.egg-info/dependency_links.txt
+[3.284s] writing entry points to ../../build/odrive_controller/odrive_controller.egg-info/entry_points.txt
+[3.284s] writing requirements to ../../build/odrive_controller/odrive_controller.egg-info/requires.txt
+[3.287s] writing top-level names to ../../build/odrive_controller/odrive_controller.egg-info/top_level.txt
+[3.299s] writing manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[3.394s] reading manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[3.401s] writing manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[3.401s] running build
+[3.402s] running build_py
+[3.402s] creating /home/ionia/Desktop/dubal_ws/build/odrive_controller/build
+[3.403s] creating /home/ionia/Desktop/dubal_ws/build/odrive_controller/build/lib
+[3.403s] creating /home/ionia/Desktop/dubal_ws/build/odrive_controller/build/lib/odrive_controller
+[3.404s] copying odrive_controller/__init__.py -> /home/ionia/Desktop/dubal_ws/build/odrive_controller/build/lib/odrive_controller
+[3.407s] running install
+[3.409s] running install_lib
+[3.412s] creating /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller
+[3.413s] copying /home/ionia/Desktop/dubal_ws/build/odrive_controller/build/lib/odrive_controller/__init__.py -> /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller
+[3.417s] byte-compiling /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller/__init__.py to __init__.cpython-38.pyc
+[3.419s] running install_data
+[3.421s] creating /home/ionia/Desktop/dubal_ws/install/odrive_controller/share/ament_index
+[3.421s] creating /home/ionia/Desktop/dubal_ws/install/odrive_controller/share/ament_index/resource_index
+[3.421s] creating /home/ionia/Desktop/dubal_ws/install/odrive_controller/share/ament_index/resource_index/packages
+[3.421s] copying resource/odrive_controller -> /home/ionia/Desktop/dubal_ws/install/odrive_controller/share/ament_index/resource_index/packages
+[3.421s] copying package.xml -> /home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller
+[3.422s] running install_egg_info
+[3.424s] Copying ../../build/odrive_controller/odrive_controller.egg-info to /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info
+[3.425s] running install_scripts
+[3.464s] writing list of installed files to '/home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log'

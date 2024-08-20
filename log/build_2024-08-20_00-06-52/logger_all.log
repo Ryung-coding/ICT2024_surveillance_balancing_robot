@@ -1,0 +1,241 @@
+[0.226s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.226s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9e804ec310>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9e804ec310>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f9e80434250>)
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.450s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ionia/Desktop/dubal_ws'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.468s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[0.475s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_cmake' and name 'controller'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore_ament_install'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_pkg']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_pkg'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_meta']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ros']
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ros'
+[0.477s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odrive_controller' with type 'ros.ament_python' and name 'odrive_controller'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ignore', 'ignore_ament_install']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore_ament_install'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_pkg']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_pkg'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_meta']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_meta'
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ros'
+[0.478s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_reciver' with type 'ros.ament_python' and name 'serial_reciver'
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.500s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ionia/Desktop/dubal_ws/install
+[0.502s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[0.503s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ionia/Desktop/dubal_ws/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ionia/Desktop/dubal_ws/install/controller', 'merge_install': False, 'path': '/home/ionia/Desktop/dubal_ws/src/controller', 'symlink_install': False, 'test_result_base': None}
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ionia/Desktop/dubal_ws/build/odrive_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ionia/Desktop/dubal_ws/install/odrive_controller', 'merge_install': False, 'path': '/home/ionia/Desktop/dubal_ws/src/odrive_controller', 'symlink_install': False, 'test_result_base': None}
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_first' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_force_configure' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'ament_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.590s] DEBUG:colcon.colcon_core.verb:Building package 'serial_reciver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ionia/Desktop/dubal_ws/build/serial_reciver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ionia/Desktop/dubal_ws/install/serial_reciver', 'merge_install': False, 'path': '/home/ionia/Desktop/dubal_ws/src/serial_reciver', 'symlink_install': False, 'test_result_base': None}
+[0.590s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.592s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.592s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ionia/Desktop/dubal_ws/src/controller' with build type 'ament_cmake'
+[0.592s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ionia/Desktop/dubal_ws/src/controller'
+[0.595s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.595s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.602s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ionia/Desktop/dubal_ws/src/odrive_controller' with build type 'ament_python'
+[0.602s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_controller', 'ament_prefix_path')
+[0.603s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.ps1'
+[0.605s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.dsv'
+[0.606s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.sh'
+[0.608s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.608s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.615s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ionia/Desktop/dubal_ws/src/serial_reciver' with build type 'ament_python'
+[0.615s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_reciver', 'ament_prefix_path')
+[0.616s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.ps1'
+[0.617s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.dsv'
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.sh'
+[0.618s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.619s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ionia/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ionia/Desktop/dubal_ws/build/controller -- -j4 -l4
+[1.027s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ionia/Desktop/dubal_ws/src/odrive_controller'
+[1.028s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.028s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.332s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ionia/Desktop/dubal_ws/src/serial_reciver'
+[1.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ionia/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ionia/Desktop/dubal_ws/build/controller -- -j4 -l4
+[1.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ionia/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ionia/Desktop/dubal_ws/build/controller
+[1.447s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller' for CMake module files
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller' for CMake config files
+[1.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[1.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[1.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ionia/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ionia/Desktop/dubal_ws/build/controller
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib'
+[1.459s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/bin'
+[1.459s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib/pkgconfig/controller.pc'
+[1.459s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib/python3.8/site-packages'
+[1.460s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/bin'
+[1.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.ps1'
+[1.462s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.dsv'
+[1.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.sh'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.bash'
+[1.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.zsh'
+[1.468s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ionia/Desktop/dubal_ws/install/controller/share/colcon-core/packages/controller)
+[1.519s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller' for CMake module files
+[1.521s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller' for CMake config files
+[1.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[1.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/bin'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib/pkgconfig/controller.pc'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/lib/python3.8/site-packages'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/controller/bin'
+[1.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.ps1'
+[1.530s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.dsv'
+[1.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.sh'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.bash'
+[1.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.zsh'
+[1.534s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ionia/Desktop/dubal_ws/install/controller/share/colcon-core/packages/controller)
+[2.071s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ionia/Desktop/dubal_ws/src/serial_reciver': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/serial_reciver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ionia/Desktop/dubal_ws/build/serial_reciver/build install --record /home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed install_data
+[2.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ionia/Desktop/dubal_ws/src/odrive_controller': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ionia/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed install_data
+[2.672s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver' for CMake module files
+[2.673s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ionia/Desktop/dubal_ws/src/serial_reciver' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/serial_reciver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ionia/Desktop/dubal_ws/build/serial_reciver/build install --record /home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed install_data
+[2.674s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver' for CMake config files
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib'
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver/bin'
+[2.677s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/pkgconfig/serial_reciver.pc'
+[2.677s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages'
+[2.677s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_reciver', 'pythonpath')
+[2.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/pythonpath.ps1'
+[2.679s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/pythonpath.dsv'
+[2.680s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/pythonpath.sh'
+[2.681s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/serial_reciver/bin'
+[2.682s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_reciver)
+[2.682s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/package.ps1'
+[2.684s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/package.dsv'
+[2.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/package.sh'
+[2.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/package.bash'
+[2.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/package.zsh'
+[2.687s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ionia/Desktop/dubal_ws/install/serial_reciver/share/colcon-core/packages/serial_reciver)
+[2.752s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller' for CMake module files
+[2.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ionia/Desktop/dubal_ws/src/odrive_controller' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ionia/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed install_data
+[2.754s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller' for CMake config files
+[2.754s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib'
+[2.755s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller/bin'
+[2.755s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/pkgconfig/odrive_controller.pc'
+[2.755s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages'
+[2.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_controller', 'pythonpath')
+[2.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/pythonpath.ps1'
+[2.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/pythonpath.dsv'
+[2.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/pythonpath.sh'
+[2.758s] Level 1:colcon.colcon_core.environment:checking '/home/ionia/Desktop/dubal_ws/install/odrive_controller/bin'
+[2.758s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_controller)
+[2.759s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/package.ps1'
+[2.759s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/package.dsv'
+[2.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/package.sh'
+[2.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/package.bash'
+[2.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/package.zsh'
+[2.761s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ionia/Desktop/dubal_ws/install/odrive_controller/share/colcon-core/packages/odrive_controller)
+[2.762s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.762s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.762s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.763s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.771s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.771s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.771s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.795s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.796s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ionia/Desktop/dubal_ws/install/local_setup.ps1'
+[2.798s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ionia/Desktop/dubal_ws/install/_local_setup_util_ps1.py'
+[2.800s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ionia/Desktop/dubal_ws/install/setup.ps1'
+[2.806s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ionia/Desktop/dubal_ws/install/local_setup.sh'
+[2.810s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ionia/Desktop/dubal_ws/install/_local_setup_util_sh.py'
+[2.811s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ionia/Desktop/dubal_ws/install/setup.sh'
+[2.813s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ionia/Desktop/dubal_ws/install/local_setup.bash'
+[2.814s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ionia/Desktop/dubal_ws/install/setup.bash'
+[2.817s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ionia/Desktop/dubal_ws/install/local_setup.zsh'
+[2.818s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ionia/Desktop/dubal_ws/install/setup.zsh'

@@ -1,0 +1,3 @@
+[console_scripts]
+serial_reciver_node = serial_reciver.serial_reciver_node:main
+

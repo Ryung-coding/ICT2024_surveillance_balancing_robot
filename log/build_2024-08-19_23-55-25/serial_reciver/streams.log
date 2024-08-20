@@ -1,0 +1,34 @@
+[1.481s] Invoking command in '/home/ionia/Desktop/dubal_ws/src/serial_reciver': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/serial_reciver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ionia/Desktop/dubal_ws/build/serial_reciver/build install --record /home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed install_data
+[2.101s] running egg_info
+[2.103s] writing ../../build/serial_reciver/serial_reciver.egg-info/PKG-INFO
+[2.104s] writing dependency_links to ../../build/serial_reciver/serial_reciver.egg-info/dependency_links.txt
+[2.105s] writing entry points to ../../build/serial_reciver/serial_reciver.egg-info/entry_points.txt
+[2.105s] writing requirements to ../../build/serial_reciver/serial_reciver.egg-info/requires.txt
+[2.106s] writing top-level names to ../../build/serial_reciver/serial_reciver.egg-info/top_level.txt
+[2.195s] reading manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'
+[2.198s] writing manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'
+[2.198s] running build
+[2.198s] running build_py
+[2.199s] copying serial_reciver/serial_reciver_node.py -> /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver
+[2.199s] copying serial_reciver/imu_receiver.py -> /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver
+[2.200s] copying serial_reciver/SerialHandler.py -> /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver
+[2.200s] copying serial_reciver/sbus_receiver.py -> /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver
+[2.201s] running install
+[2.203s] running install_lib
+[2.205s] copying /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver/serial_reciver_node.py -> /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver
+[2.205s] copying /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver/imu_receiver.py -> /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver
+[2.206s] copying /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver/SerialHandler.py -> /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver
+[2.206s] copying /home/ionia/Desktop/dubal_ws/build/serial_reciver/build/lib/serial_reciver/sbus_receiver.py -> /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver
+[2.206s] byte-compiling /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver/serial_reciver_node.py to serial_reciver_node.cpython-38.pyc
+[2.211s] byte-compiling /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver/imu_receiver.py to imu_receiver.cpython-38.pyc
+[2.212s] byte-compiling /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver/SerialHandler.py to SerialHandler.cpython-38.pyc
+[2.213s] byte-compiling /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver/sbus_receiver.py to sbus_receiver.cpython-38.pyc
+[2.215s] running install_data
+[2.215s] copying package.xml -> /home/ionia/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver
+[2.215s] running install_egg_info
+[2.219s] removing '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info' (and everything under it)
+[2.220s] Copying ../../build/serial_reciver/serial_reciver.egg-info to /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info
+[2.224s] running install_scripts
+[2.263s] Installing serial_reciver_node script to /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/serial_reciver
+[2.265s] writing list of installed files to '/home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log'
+[2.321s] Invoked command in '/home/ionia/Desktop/dubal_ws/src/serial_reciver' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/serial_reciver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ionia/Desktop/dubal_ws/build/serial_reciver/build install --record /home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed install_data

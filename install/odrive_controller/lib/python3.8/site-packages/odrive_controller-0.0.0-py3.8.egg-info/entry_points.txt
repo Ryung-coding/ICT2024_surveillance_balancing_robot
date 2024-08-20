@@ -1,0 +1,3 @@
+[console_scripts]
+odrive_controller = odrive_controller.odrive_controller:main
+

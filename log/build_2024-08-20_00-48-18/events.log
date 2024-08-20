@@ -1,0 +1,179 @@
+[0.000000] (-) TimerEvent: {}
+[0.000308] (controller) JobQueued: {'identifier': 'controller', 'dependencies': OrderedDict()}
+[0.001318] (odrive_controller) JobQueued: {'identifier': 'odrive_controller', 'dependencies': OrderedDict()}
+[0.001460] (serial_reciver) JobQueued: {'identifier': 'serial_reciver', 'dependencies': OrderedDict()}
+[0.001577] (controller) JobStarted: {'identifier': 'controller'}
+[0.010341] (odrive_controller) JobStarted: {'identifier': 'odrive_controller'}
+[0.022037] (serial_reciver) JobStarted: {'identifier': 'serial_reciver'}
+[0.038273] (controller) JobProgress: {'identifier': 'controller', 'progress': 'cmake'}
+[0.039412] (controller) JobProgress: {'identifier': 'controller', 'progress': 'build'}
+[0.040357] (controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ionia/Desktop/dubal_ws/build/controller', '--', '-j4', '-l4'], 'cwd': '/home/ionia/Desktop/dubal_ws/build/controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ionia'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1333'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/ionia'), ('OLDPWD', '/home/ionia/Desktop/dubal_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3559'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'ionia'), ('JOURNAL_STREAM', '8:43865'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ionia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ionia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ionia:@/tmp/.ICE-unix/1379,unix/ionia:/tmp/.ICE-unix/1379'), ('INVOCATION_ID', 'd331703cf357425b9f1e258e632f1233'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '13'), ('AMENT_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/home/ionia/Desktop/dubal_ws/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:4599947c-f873-4908-976e-a6a115aaa47b'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/ionia/Desktop/dubal_ws/build/controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install/controller:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy')]), 'shell': False}
+[0.099790] (-) TimerEvent: {}
+[0.200556] (-) TimerEvent: {}
+[0.300985] (-) TimerEvent: {}
+[0.402218] (-) TimerEvent: {}
+[0.504151] (-) TimerEvent: {}
+[0.604861] (-) TimerEvent: {}
+[0.705282] (-) TimerEvent: {}
+[0.805740] (-) TimerEvent: {}
+[0.906858] (-) TimerEvent: {}
+[0.916920] (controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target controller_main\x1b[0m\n'}
+[0.919270] (controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o\x1b[0m\n'}
+[1.007067] (-) TimerEvent: {}
+[1.107698] (-) TimerEvent: {}
+[1.208330] (-) TimerEvent: {}
+[1.308844] (-) TimerEvent: {}
+[1.409406] (-) TimerEvent: {}
+[1.510134] (-) TimerEvent: {}
+[1.610588] (-) TimerEvent: {}
+[1.655418] (odrive_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/odrive_controller', 'build', '--build-base', '/home/ionia/Desktop/dubal_ws/build/odrive_controller/build', 'install', '--record', '/home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log', '--install-scripts', '$base/lib/odrive_controller', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ionia/Desktop/dubal_ws/src/odrive_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ionia', 'LC_TIME': 'ko_KR.UTF-8', 'SSH_AGENT_PID': '1333', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'QT4_IM_MODULE': 'fcitx', 'HOME': '/home/ionia', 'OLDPWD': '/home/ionia/Desktop/dubal_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ko_KR.UTF-8', 'MANAGERPID': '1236', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3559', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install', 'ROS_DISTRO': 'foxy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'ionia', 'JOURNAL_STREAM': '8:43865', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ionia', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/ionia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ionia:@/tmp/.ICE-unix/1379,unix/ionia:/tmp/.ICE-unix/1379', 'INVOCATION_ID': 'd331703cf357425b9f1e258e632f1233', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '13', 'AMENT_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/home/ionia/Desktop/dubal_ws/install/controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:4599947c-f873-4908-976e-a6a115aaa47b', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://localhost:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/ionia/Desktop/dubal_ws/build/odrive_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'ROS_HOSTNAME': 'localhost', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install/controller'}, 'shell': False}
+[1.710881] (-) TimerEvent: {}
+[1.814528] (serial_reciver) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/serial_reciver', 'build', '--build-base', '/home/ionia/Desktop/dubal_ws/build/serial_reciver/build', 'install', '--record', '/home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log', '--install-scripts', '$base/lib/serial_reciver', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ionia/Desktop/dubal_ws/src/serial_reciver', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ionia', 'LC_TIME': 'ko_KR.UTF-8', 'SSH_AGENT_PID': '1333', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'QT4_IM_MODULE': 'fcitx', 'HOME': '/home/ionia', 'OLDPWD': '/home/ionia/Desktop/dubal_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'ko_KR.UTF-8', 'MANAGERPID': '1236', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3559', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install', 'ROS_DISTRO': 'foxy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'ionia', 'JOURNAL_STREAM': '8:43865', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ionia', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/ionia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/ionia:@/tmp/.ICE-unix/1379,unix/ionia:/tmp/.ICE-unix/1379', 'INVOCATION_ID': 'd331703cf357425b9f1e258e632f1233', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ko_KR.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ko_KR.UTF-8', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '13', 'AMENT_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/home/ionia/Desktop/dubal_ws/install/controller:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'ko_KR.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:4599947c-f873-4908-976e-a6a115aaa47b', 'QT_ACCESSIBILITY': '1', 'ROS_MASTER_URI': 'http://localhost:11311', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'ko_KR.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'ko_KR.UTF-8', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/ionia/Desktop/dubal_ws/build/serial_reciver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'fcitx', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ionia/Desktop/dubal_ws/build/serial_reciver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'ROS_HOSTNAME': 'localhost', 'LC_NUMERIC': 'ko_KR.UTF-8', 'LC_PAPER': 'ko_KR.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/ionia/Desktop/dubal_ws/install/controller'}, 'shell': False}
+[1.818732] (-) TimerEvent: {}
+[1.920182] (-) TimerEvent: {}
+[2.020625] (-) TimerEvent: {}
+[2.121036] (-) TimerEvent: {}
+[2.121935] (odrive_controller) StdoutLine: {'line': b'running egg_info\n'}
+[2.124025] (odrive_controller) StdoutLine: {'line': b'writing ../../build/odrive_controller/odrive_controller.egg-info/PKG-INFO\n'}
+[2.126387] (odrive_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/odrive_controller/odrive_controller.egg-info/dependency_links.txt\n'}
+[2.126697] (odrive_controller) StdoutLine: {'line': b'writing entry points to ../../build/odrive_controller/odrive_controller.egg-info/entry_points.txt\n'}
+[2.127075] (odrive_controller) StdoutLine: {'line': b'writing requirements to ../../build/odrive_controller/odrive_controller.egg-info/requires.txt\n'}
+[2.127288] (odrive_controller) StdoutLine: {'line': b'writing top-level names to ../../build/odrive_controller/odrive_controller.egg-info/top_level.txt\n'}
+[2.203969] (odrive_controller) StdoutLine: {'line': b"reading manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'\n"}
+[2.206466] (odrive_controller) StdoutLine: {'line': b"writing manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'\n"}
+[2.207146] (odrive_controller) StdoutLine: {'line': b'running build\n'}
+[2.207544] (odrive_controller) StdoutLine: {'line': b'running build_py\n'}
+[2.208517] (odrive_controller) StdoutLine: {'line': b'running install\n'}
+[2.210577] (odrive_controller) StdoutLine: {'line': b'running install_lib\n'}
+[2.213982] (odrive_controller) StdoutLine: {'line': b'running install_data\n'}
+[2.214713] (odrive_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.218543] (odrive_controller) StdoutLine: {'line': b"removing '/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[2.231370] (odrive_controller) StdoutLine: {'line': b'Copying ../../build/odrive_controller/odrive_controller.egg-info to /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info\n'}
+[2.231674] (-) TimerEvent: {}
+[2.234246] (odrive_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[2.274072] (odrive_controller) StdoutLine: {'line': b'Installing odrive_controller script to /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/odrive_controller\n'}
+[2.274690] (odrive_controller) StdoutLine: {'line': b"writing list of installed files to '/home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log'\n"}
+[2.324747] (odrive_controller) CommandEnded: {'returncode': 0}
+[2.325531] (serial_reciver) StdoutLine: {'line': b'running egg_info\n'}
+[2.326624] (serial_reciver) StdoutLine: {'line': b'writing ../../build/serial_reciver/serial_reciver.egg-info/PKG-INFO\n'}
+[2.326945] (serial_reciver) StdoutLine: {'line': b'writing dependency_links to ../../build/serial_reciver/serial_reciver.egg-info/dependency_links.txt\n'}
+[2.327206] (serial_reciver) StdoutLine: {'line': b'writing entry points to ../../build/serial_reciver/serial_reciver.egg-info/entry_points.txt\n'}
+[2.327443] (serial_reciver) StdoutLine: {'line': b'writing requirements to ../../build/serial_reciver/serial_reciver.egg-info/requires.txt\n'}
+[2.327671] (serial_reciver) StdoutLine: {'line': b'writing top-level names to ../../build/serial_reciver/serial_reciver.egg-info/top_level.txt\n'}
+[2.331801] (-) TimerEvent: {}
+[2.352661] (odrive_controller) JobEnded: {'identifier': 'odrive_controller', 'rc': 0}
+[2.408262] (serial_reciver) StdoutLine: {'line': b"reading manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'\n"}
+[2.410899] (serial_reciver) StdoutLine: {'line': b"writing manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'\n"}
+[2.411400] (serial_reciver) StdoutLine: {'line': b'running build\n'}
+[2.411612] (serial_reciver) StdoutLine: {'line': b'running build_py\n'}
+[2.412116] (serial_reciver) StdoutLine: {'line': b'running install\n'}
+[2.413879] (serial_reciver) StdoutLine: {'line': b'running install_lib\n'}
+[2.417192] (serial_reciver) StdoutLine: {'line': b'running install_data\n'}
+[2.417623] (serial_reciver) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.420818] (serial_reciver) StdoutLine: {'line': b"removing '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[2.421421] (serial_reciver) StdoutLine: {'line': b'Copying ../../build/serial_reciver/serial_reciver.egg-info to /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info\n'}
+[2.423124] (serial_reciver) StdoutLine: {'line': b'running install_scripts\n'}
+[2.431934] (-) TimerEvent: {}
+[2.461741] (serial_reciver) StdoutLine: {'line': b'Installing serial_reciver_node script to /home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/serial_reciver\n'}
+[2.464828] (serial_reciver) StdoutLine: {'line': b"writing list of installed files to '/home/ionia/Desktop/dubal_ws/build/serial_reciver/install.log'\n"}
+[2.514612] (serial_reciver) CommandEnded: {'returncode': 0}
+[2.527082] (serial_reciver) JobEnded: {'identifier': 'serial_reciver', 'rc': 0}
+[2.532072] (-) TimerEvent: {}
+[2.632641] (-) TimerEvent: {}
+[2.733128] (-) TimerEvent: {}
+[2.833610] (-) TimerEvent: {}
+[2.934072] (-) TimerEvent: {}
+[3.034541] (-) TimerEvent: {}
+[3.135024] (-) TimerEvent: {}
+[3.235498] (-) TimerEvent: {}
+[3.335929] (-) TimerEvent: {}
+[3.436354] (-) TimerEvent: {}
+[3.536825] (-) TimerEvent: {}
+[3.637319] (-) TimerEvent: {}
+[3.737826] (-) TimerEvent: {}
+[3.838328] (-) TimerEvent: {}
+[3.938822] (-) TimerEvent: {}
+[4.039230] (-) TimerEvent: {}
+[4.139631] (-) TimerEvent: {}
+[4.240104] (-) TimerEvent: {}
+[4.340540] (-) TimerEvent: {}
+[4.440958] (-) TimerEvent: {}
+[4.541369] (-) TimerEvent: {}
+[4.641775] (-) TimerEvent: {}
+[4.742185] (-) TimerEvent: {}
+[4.842548] (-) TimerEvent: {}
+[4.943029] (-) TimerEvent: {}
+[5.043482] (-) TimerEvent: {}
+[5.143923] (-) TimerEvent: {}
+[5.244378] (-) TimerEvent: {}
+[5.344928] (-) TimerEvent: {}
+[5.445388] (-) TimerEvent: {}
+[5.545871] (-) TimerEvent: {}
+[5.646312] (-) TimerEvent: {}
+[5.746725] (-) TimerEvent: {}
+[5.847134] (-) TimerEvent: {}
+[5.947597] (-) TimerEvent: {}
+[6.048069] (-) TimerEvent: {}
+[6.148559] (-) TimerEvent: {}
+[6.249069] (-) TimerEvent: {}
+[6.349562] (-) TimerEvent: {}
+[6.450093] (-) TimerEvent: {}
+[6.550539] (-) TimerEvent: {}
+[6.651004] (-) TimerEvent: {}
+[6.751428] (-) TimerEvent: {}
+[6.852156] (-) TimerEvent: {}
+[6.952589] (-) TimerEvent: {}
+[7.053014] (-) TimerEvent: {}
+[7.153414] (-) TimerEvent: {}
+[7.253806] (-) TimerEvent: {}
+[7.354202] (-) TimerEvent: {}
+[7.454610] (-) TimerEvent: {}
+[7.555073] (-) TimerEvent: {}
+[7.655487] (-) TimerEvent: {}
+[7.755873] (-) TimerEvent: {}
+[7.856314] (-) TimerEvent: {}
+[7.956714] (-) TimerEvent: {}
+[8.057121] (-) TimerEvent: {}
+[8.157509] (-) TimerEvent: {}
+[8.257908] (-) TimerEvent: {}
+[8.358304] (-) TimerEvent: {}
+[8.458694] (-) TimerEvent: {}
+[8.559108] (-) TimerEvent: {}
+[8.659503] (-) TimerEvent: {}
+[8.759899] (-) TimerEvent: {}
+[8.860327] (-) TimerEvent: {}
+[8.960766] (-) TimerEvent: {}
+[9.061240] (-) TimerEvent: {}
+[9.161695] (-) TimerEvent: {}
+[9.242565] (controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller_main\x1b[0m\n'}
+[9.261843] (-) TimerEvent: {}
+[9.362362] (-) TimerEvent: {}
+[9.462911] (-) TimerEvent: {}
+[9.563331] (-) TimerEvent: {}
+[9.663805] (-) TimerEvent: {}
+[9.689753] (controller) StdoutLine: {'line': b'[100%] Built target controller_main\n'}
+[9.705578] (controller) CommandEnded: {'returncode': 0}
+[9.737151] (controller) JobProgress: {'identifier': 'controller', 'progress': 'install'}
+[9.751408] (controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ionia/Desktop/dubal_ws/build/controller'], 'cwd': '/home/ionia/Desktop/dubal_ws/build/controller', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ionia'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1333'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/ionia'), ('OLDPWD', '/home/ionia/Desktop/dubal_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1236'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3559'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'ionia'), ('JOURNAL_STREAM', '8:43865'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ionia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/ionia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/ionia:@/tmp/.ICE-unix/1379,unix/ionia:/tmp/.ICE-unix/1379'), ('INVOCATION_ID', 'd331703cf357425b9f1e258e632f1233'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '13'), ('AMENT_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/home/ionia/Desktop/dubal_ws/install/controller:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:4599947c-f873-4908-976e-a6a115aaa47b'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/ionia/Desktop/dubal_ws/build/controller'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ionia/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/ionia/Desktop/dubal_ws/install/controller:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy')]), 'shell': False}
+[9.764057] (controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.764316] (-) TimerEvent: {}
+[9.764597] (controller) StdoutLine: {'line': b'-- Installing: /home/ionia/Desktop/dubal_ws/install/controller/lib/controller/controller_main\n'}
+[9.769467] (controller) StdoutLine: {'line': b'-- Set runtime path of "/home/ionia/Desktop/dubal_ws/install/controller/lib/controller/controller_main" to ""\n'}
+[9.769967] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/package_run_dependencies/controller\n'}
+[9.770264] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/parent_prefix_path/controller\n'}
+[9.770515] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/environment/ament_prefix_path.sh\n'}
+[9.770795] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/environment/ament_prefix_path.dsv\n'}
+[9.771006] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/environment/path.sh\n'}
+[9.771183] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/environment/path.dsv\n'}
+[9.771461] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/local_setup.bash\n'}
+[9.771670] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/local_setup.sh\n'}
+[9.771851] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/local_setup.zsh\n'}
+[9.772005] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/local_setup.dsv\n'}
+[9.772156] (controller) StdoutLine: {'line': b'-- Installing: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.dsv\n'}
+[9.772328] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/packages/controller\n'}
+[9.772516] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/cmake/controllerConfig.cmake\n'}
+[9.772692] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/cmake/controllerConfig-version.cmake\n'}
+[9.772870] (controller) StdoutLine: {'line': b'-- Up-to-date: /home/ionia/Desktop/dubal_ws/install/controller/share/controller/package.xml\n'}
+[9.774528] (controller) CommandEnded: {'returncode': 0}
+[9.824699] (controller) JobEnded: {'identifier': 'controller', 'rc': 0}
+[9.825904] (-) EventReactorShutdown: {}

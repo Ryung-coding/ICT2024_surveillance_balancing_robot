@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/odrive_controller/odrive_controller.egg-info/PKG-INFO
+../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt
+../../build/odrive_controller/odrive_controller.egg-info/dependency_links.txt
+../../build/odrive_controller/odrive_controller.egg-info/entry_points.txt
+../../build/odrive_controller/odrive_controller.egg-info/requires.txt
+../../build/odrive_controller/odrive_controller.egg-info/top_level.txt
+../../build/odrive_controller/odrive_controller.egg-info/zip-safe
+odrive_controller/__init__.py
+odrive_controller/odrive_controller.py
+resource/odrive_controller
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
