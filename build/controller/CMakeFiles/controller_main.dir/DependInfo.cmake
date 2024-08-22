@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ionia/Desktop/dubal_ws/src/controller/src/controller_main.cpp" "/home/ionia/Desktop/dubal_ws/build/controller/CMakeFiles/controller_main.dir/src/controller_main.cpp.o"
+  "/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp" "/home/ryung/Desktop/buf/build/controller/CMakeFiles/controller_main.dir/src/controller_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

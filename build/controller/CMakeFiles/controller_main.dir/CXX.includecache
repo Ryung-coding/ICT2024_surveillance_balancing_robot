@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ionia/Desktop/dubal_ws/src/controller/src/controller_main.cpp
+/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp
 rclcpp/rclcpp.hpp
 -
 sensor_msgs/msg/joint_state.hpp
@@ -14,6 +14,8 @@ sensor_msgs/msg/joint_state.hpp
 sensor_msgs/msg/imu.hpp
 -
 std_msgs/msg/float64_multi_array.hpp
+-
+cmath
 -
 
 /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp

@@ -1,4 +1,3 @@
 import sys
-if sys.prefix == '/usr':
-    sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/ionia/Desktop/dubal_ws/install/odrive_controller'
+sys.real_prefix = sys.prefix
+sys.prefix = sys.exec_prefix = '/home/ryung/Desktop/buf/install/odrive_controller'

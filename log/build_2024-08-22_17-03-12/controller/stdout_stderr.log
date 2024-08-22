@@ -1,0 +1,64 @@
+[35m[1mScanning dependencies of target controller_main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:178:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+  178 |     auto imu_theta_dot_publisher = node->create_publisher<std_msgs::msg::[01;31m[KFloat64[m[K>("imu_theta_dot", 10);
+      |                                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:178:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:178:102:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [14], int)[m[K’
+  178 |     auto imu_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("imu_theta_dot", 10[01;31m[K)[m[K;
+      |                                                                                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   71 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:178:102:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  178 |     auto imu_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("imu_theta_dot", 10[01;31m[K)[m[K;
+      |                                                                                                      [01;31m[K^[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:179:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+  179 |     auto ref_theta_dot_publisher = node->create_publisher<std_msgs::msg::[01;31m[KFloat64[m[K>("ref_theta_dot", 10);
+      |                                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:179:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:179:102:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [14], int)[m[K’
+  179 |     auto ref_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("ref_theta_dot", 10[01;31m[K)[m[K;
+      |                                                                                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   71 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:179:102:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  179 |     auto ref_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("ref_theta_dot", 10[01;31m[K)[m[K;
+      |                                                                                                      [01;31m[K^[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:182:20:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+  182 |     std_msgs::msg::[01;31m[KFloat64[m[K odrive_msg_1;
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:183:20:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+  183 |     std_msgs::msg::[01;31m[KFloat64[m[K imu_theta_dot_msg;
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:184:20:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+  184 |     std_msgs::msg::[01;31m[KFloat64[m[K ref_theta_dot_msg;
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:214:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta_dot_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_theta_dot[m[K’?
+  214 |         [01;31m[Kimu_theta_dot_msg[m[K.data = imu_theta_dot;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |         [32m[Kimu_theta_dot[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kref_theta_dot_msg[m[K’ was not declared in this scope
+  215 |         [01;31m[Kref_theta_dot_msg[m[K.data = ref_theta_dot;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kref_theta_dot[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_theta_dot[m[K’?
+  215 |         ref_theta_dot_msg.data = [01;31m[Kref_theta_dot[m[K;
+      |                                  [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                  [32m[Kimu_theta_dot[m[K
+make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

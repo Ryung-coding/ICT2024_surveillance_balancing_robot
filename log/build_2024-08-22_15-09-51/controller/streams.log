@@ -1,0 +1,13 @@
+[0.441s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.689s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[1.069s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:113:1:[m[K [01;31m[Kerror: [m[K‘[01m[K::main[m[K’ must return ‘[01m[Kint[m[K’
+[1.069s]   113 | [01;31m[Kvoid[m[K main(int argc, char *argv[])
+[1.069s]       | [01;31m[K^~~~[m[K
+[1.086s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.086s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:168:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontroller_main[m[K’ was not declared in this scope
+[1.086s]   168 |         [01;31m[Kcontroller_main[m[K();
+[1.086s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.021s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[2.021s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[2.021s] make: *** [Makefile:141: all] Error 2
+[2.023s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16

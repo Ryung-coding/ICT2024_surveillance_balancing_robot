@@ -2,7 +2,7 @@
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
-
+#include <cmath>
 
 //Control Const
 #define loop_hz 100
@@ -12,7 +12,8 @@
 #define leg_up_bound 700
 #define leg_down_bound 1400
 #define DEADZONE_SBUS 2
-#define DEADZONE_INPUT 2
+#define DEADZONE_INPUT 0
+#define Lim_INPUT 20
 
 //Math Const
 #define deg2rad 0.01745329252
@@ -20,10 +21,16 @@
 #define wheel_radius 0.0525 
 #define RevPerS2RadPerS 6.283185307 
 
+float Kp0=0.0; float Ki0=0.0; float Kd0=0.0;
+float Kp1=5.5; float Ki1=0.0; float Kd1=1.0;
+float Kp2=11.0; float Ki2=0.0; float Kd2=2.2;
+float Kp3=0.0; float Ki3=0.0; float Kd3=0.0;
+
 //Controller Value
 float sbus_data[4] = {0.0, 0.0, 0.0, 0.0}; //raw signal data
 float ref[4] = {0.0, 0.0, 0.0, 0.0};       //filtering & Transfer signal data { Heading Angle Velocity | Thrust Velocity | Leg Case | Kill }
 float I[4] = {0.0, 0.0, 0.0, 0.0}; 
+float D[4] = {0.0, 0.0, 0.0, 0.0}; 
 float y_past[4] = {0.0, 0.0, 0.0, 0.0};
 float imu_theta = 0.0; float imu_theta_past = 0.0; float imu_theta_dot = 0.0;
 float imu_psi = 0.0; float imu_psi_past = 0.0; float imu_psi_dot = 0.0;
@@ -75,10 +82,17 @@ void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     imu_theta_past = imu_theta;
     imu_psi_past = imu_psi;
 
-    imu_theta = msg->angular_velocity.y * deg2rad;                                          //rad
-    imu_psi = msg->angular_velocity.z * deg2rad;                                            //rad
-    imu_theta_dot = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.05);    //rad/s
-    imu_psi_dot = lowpassfilter(imu_psi_dot, (imu_psi - imu_psi_past)/dt, 0.05);            //rad/s
+    imu_theta = lowpassfilter(imu_theta, -msg->angular_velocity.y * deg2rad, 0.01);                                         //rad
+    imu_psi = lowpassfilter(imu_psi, -msg->angular_velocity.z * deg2rad, 0.01);          
+    
+    if(abs(imu_theta-imu_theta_past)>0.01*deg2rad)
+    {   
+        imu_theta_dot = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.9);    //rad/s
+        // RCLCPP_INFO(rclcpp::get_logger("controller"), "", ref[0]);
+    }        
+    
+    imu_psi_dot = lowpassfilter(imu_psi_dot, (imu_psi - imu_psi_past)/dt, 0.01);            //rad/s
+    
 }
 
 float computePID(float r, float y, float dt, int i, float Kp, float Kd, float Ki)
@@ -86,39 +100,75 @@ float computePID(float r, float y, float dt, int i, float Kp, float Kd, float Ki
     float error = r - y;
 
     float P = Kp * error;
-    I[i] += Ki * error * dt;
 
-    float D = Kd * -(y - y_past[i]) / dt;
+    I[i] += Ki * error * dt;
+    if(I[i]>2)
+    {
+        I[i]=2;
+    } 
+    if(I[i]<-2)
+    {
+        I[i]=-2;
+    } 
+
+    
+    D[i] = lowpassfilter(D[i],Kd*(y - y_past[i])/dt,0.9);
     y_past[i] = y;
 
-    float u = P + I[i] + D;
+    float u = P + I[i] + D[i];
     return u;
 }
 
 void controller_main()
 {
-    //velocity PID | Err_velocity -> desired theta
+        //velocity PID | Err_velocity -> desired theta
     // float ref_theta = computePID(ref[1], wheel_radius*balancing_CMD*RevPerS2RadPerS, dt, 0, 1.0, 0.0, 0.0);
 
-    //Attitude PID | Err_theta -> desired theta_dot 
-    float ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, 10.0, 0.0, 0.0); //ref_theta
-    Motor_L_cmd=ref_theta_dot;
-    //Attitude PID | Err_theta_dot -> motor Input CMD for balancing 
-    // balancing_CMD = computePID(ref_theta_dot, imu_theta_dot, dt, 2, 1.0, 0.0, 0.0);
+        //Attitude PID | Err_theta -> desired theta_dot 
+    ref[2]=-1*deg2rad; //example
 
-    //Heading PID | Err_psi_dot -> motor Input CMD for balancing 
-    heading_CMD = computePID(ref[0], imu_psi_dot, dt, 3, 0.0, 0.0, 0.0);
+    float ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, Kp1, Ki1, Kd1); //ref_theta 
+    
+        //Attitude PID | Err_theta_dot -> motor Input CMD for balancing 
+    balancing_CMD = computePID(ref_theta_dot, imu_theta_dot, dt, 2, Kp2, Ki2, Kd2); //ref_theta_dot
 
-    // if(Motor_L_cmd <  DEADZONE_INPUT && Motor_L_cmd > -DEADZONE_INPUT) Motor_L_cmd=0;
-    // Motor_R_cmd = (balancing_CMD + heading_CMD) >  DEADZONE_INPUT || (balancing_CMD + heading_CMD) < -DEADZONE_INPUT ? (balancing_CMD + heading_CMD) : 0;
+        //Heading PID | Err_psi_dot -> motor Input CMD for balancing 
+    heading_CMD = computePID(ref[0], imu_psi_dot, dt, 3, Kp3, Ki3, Kd3);
+
+    Motor_L_cmd=balancing_CMD - heading_CMD;
 }
-
 
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
     auto node = rclcpp::Node::make_shared("Main_controller");
+
+    node->declare_parameter<float>("Kp0", 0.0);
+    node->declare_parameter<float>("Ki0", 0.0);
+    node->declare_parameter<float>("Kd0", 0.0);
+    node->declare_parameter<float>("Kp1", 0.0);
+    node->declare_parameter<float>("Ki1", 0.0);
+    node->declare_parameter<float>("Kd1", 0.0);
+    node->declare_parameter<float>("Kp2", 0.0);
+    node->declare_parameter<float>("Ki2", 0.0);
+    node->declare_parameter<float>("Kd2", 0.0);
+    node->declare_parameter<float>("Kp3", 0.0);
+    node->declare_parameter<float>("Ki3", 0.0);
+    node->declare_parameter<float>("Kd3", 0.0);
+
+    Kp0 = node->get_parameter("Kp0").as_double();
+    Ki0 = node->get_parameter("Ki0").as_double();
+    Kd0 = node->get_parameter("Kd0").as_double();
+    Kp1 = node->get_parameter("Kp1").as_double();
+    Ki1 = node->get_parameter("Ki1").as_double();
+    Kd1 = node->get_parameter("Kd1").as_double();
+    Kp2 = node->get_parameter("Kp2").as_double();
+    Ki2 = node->get_parameter("Ki2").as_double();
+    Kd2 = node->get_parameter("Kd2").as_double();
+    Kp3 = node->get_parameter("Kp3").as_double();
+    Ki3 = node->get_parameter("Ki3").as_double();
+    Kd3 = node->get_parameter("Kd3").as_double();
 
     auto sbus_subscription = node->create_subscription<sensor_msgs::msg::JointState>("sbus_data", 10, sbus_callback);
 
@@ -130,7 +180,7 @@ int main(int argc, char *argv[])
     std_msgs::msg::Float64MultiArray odrive_msg_0;
     std_msgs::msg::Float64MultiArray odrive_msg_1;
 
-    odrive_msg_0.data.resize(1);;
+    odrive_msg_0.data.resize(1);
     // odrive_msg_1.data.resize(1);
 
     last_time = node->now();
@@ -145,18 +195,13 @@ int main(int argc, char *argv[])
 
         controller_main();
 
-        if(ref[3] > 0.4)
-        {   
-            odrive_msg_0.data[0] = Motor_L_cmd;
-            // odrive_msg_1.data[0] = Motor_R_cmd;
-        }
-        else
-        {
-            odrive_msg_0.data[0] = 0;
-            // odrive_msg_1.data[0] = 0;
-        }
-        RCLCPP_INFO(rclcpp::get_logger("controller"), "heading=%f thrust=%f leg=%f kill=%f u=%f", ref[0], ref[1], ref[2], ref[3], Motor_L_cmd);
+        //constrain
+        if(((Motor_L_cmd <  DEADZONE_INPUT)&&(Motor_L_cmd>0)) || (Motor_L_cmd > -DEADZONE_INPUT)&&(Motor_L_cmd<0)) Motor_L_cmd=0;
+        if(Motor_L_cmd >  Lim_INPUT || Motor_L_cmd <  -Lim_INPUT) Motor_L_cmd=Motor_L_cmd > 0 ? Lim_INPUT : -Lim_INPUT;
 
+        odrive_msg_0.data[0] = Motor_L_cmd;
+        RCLCPP_INFO(rclcpp::get_logger("controller"), "heading=%f thrust=%f leg=%f kill=%f u=%f", ref[0], ref[1], ref[2], ref[3], Motor_L_cmd);
+        
         odrive_publisher_0->publish(odrive_msg_0);
         // odrive_publisher_1->publish(odrive_msg_1);
         
