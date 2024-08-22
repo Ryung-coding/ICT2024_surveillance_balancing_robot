@@ -79,11 +79,11 @@ controller_main_EXTERNAL_OBJECTS =
 
 controller_main: CMakeFiles/controller_main.dir/src/controller_main.cpp.o
 controller_main: CMakeFiles/controller_main.dir/build.make
-controller_main: /opt/ros/foxy/lib/librclcpp.so
 controller_main: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_c.so
 controller_main: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
 controller_main: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 controller_main: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+controller_main: /opt/ros/foxy/lib/librclcpp.so
 controller_main: /opt/ros/foxy/lib/liblibstatistics_collector.so
 controller_main: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_typesupport_introspection_c.so
 controller_main: /opt/ros/foxy/lib/liblibstatistics_collector_test_msgs__rosidl_generator_c.so

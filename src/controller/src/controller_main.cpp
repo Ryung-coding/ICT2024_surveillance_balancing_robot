@@ -2,6 +2,7 @@
 #include <sensor_msgs/msg/joint_state.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
+#include <std_msgs/msg/float64.hpp>
 #include <cmath>
 
 //Control Const
@@ -13,7 +14,7 @@
 #define leg_down_bound 1400
 #define DEADZONE_SBUS 2
 #define DEADZONE_INPUT 0
-#define Lim_INPUT 20
+#define Lim_INPUT 10
 
 //Math Const
 #define deg2rad 0.01745329252
@@ -32,10 +33,11 @@ float ref[4] = {0.0, 0.0, 0.0, 0.0};       //filtering & Transfer signal data { 
 float I[4] = {0.0, 0.0, 0.0, 0.0}; 
 float D[4] = {0.0, 0.0, 0.0, 0.0}; 
 float y_past[4] = {0.0, 0.0, 0.0, 0.0};
-float imu_theta = 0.0; float imu_theta_past = 0.0; float imu_theta_dot = 0.0;
+float imu_theta = 0.0; float imu_theta_past = 0.0; float imu_theta_dot = 0.0; 
 float imu_psi = 0.0; float imu_psi_past = 0.0; float imu_psi_dot = 0.0;
 float Motor_L_cmd=0.0; float Motor_R_cmd=0.0; 
 float balancing_CMD=0.0; float heading_CMD=0.0;
+float ref_theta_dot=0.0;
 
 float dt = 1/loop_hz;
 rclcpp::Time last_time;
@@ -87,7 +89,7 @@ void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg)
     
     if(abs(imu_theta-imu_theta_past)>0.01*deg2rad)
     {   
-        imu_theta_dot = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.9);    //rad/s
+        imu_theta_dot = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.1);    //rad/s
         // RCLCPP_INFO(rclcpp::get_logger("controller"), "", ref[0]);
     }        
     
@@ -112,7 +114,7 @@ float computePID(float r, float y, float dt, int i, float Kp, float Kd, float Ki
     } 
 
     
-    D[i] = lowpassfilter(D[i],Kd*(y - y_past[i])/dt,0.9);
+    D[i] = lowpassfilter(D[i],-Kd*(y - y_past[i])/dt,0.1);
     y_past[i] = y;
 
     float u = P + I[i] + D[i];
@@ -125,9 +127,9 @@ void controller_main()
     // float ref_theta = computePID(ref[1], wheel_radius*balancing_CMD*RevPerS2RadPerS, dt, 0, 1.0, 0.0, 0.0);
 
         //Attitude PID | Err_theta -> desired theta_dot 
-    ref[2]=-1*deg2rad; //example
+    ref[2]=-3*deg2rad; //example
 
-    float ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, Kp1, Ki1, Kd1); //ref_theta 
+    ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, Kp1, Ki1, Kd1); //ref_theta 
     
         //Attitude PID | Err_theta_dot -> motor Input CMD for balancing 
     balancing_CMD = computePID(ref_theta_dot, imu_theta_dot, dt, 2, Kp2, Ki2, Kd2); //ref_theta_dot
@@ -137,6 +139,7 @@ void controller_main()
 
     Motor_L_cmd=balancing_CMD - heading_CMD;
 }
+
 
 int main(int argc, char *argv[])
 {
@@ -171,17 +174,18 @@ int main(int argc, char *argv[])
     Kd3 = node->get_parameter("Kd3").as_double();
 
     auto sbus_subscription = node->create_subscription<sensor_msgs::msg::JointState>("sbus_data", 10, sbus_callback);
-
     auto imu_subscription = node->create_subscription<sensor_msgs::msg::Imu>("imu_data", 10, imu_callback);
 
     auto odrive_publisher_0 = node->create_publisher<std_msgs::msg::Float64MultiArray>("/joint0_velocity_controller/commands", 10);
-    // auto odrive_publisher_1 = node->create_publisher<std_msgs::msg::Float64MultiArray>("/joint1_velocity_controller/commands", 10);
+
+    // 추가한 퍼블리셔들 - 메시지 타입을 Float64로 수정
+    auto ref_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("/ref_theta_dot", 10);
+    auto imu_theta_publisher = node->create_publisher<std_msgs::msg::Float64>("/imu_theta", 10);
+    auto imu_theta_dot_publisher = node->create_publisher<std_msgs::msg::Float64>("/imu_theta_dot", 10);
 
     std_msgs::msg::Float64MultiArray odrive_msg_0;
-    std_msgs::msg::Float64MultiArray odrive_msg_1;
 
     odrive_msg_0.data.resize(1);
-    // odrive_msg_1.data.resize(1);
 
     last_time = node->now();
     rclcpp::WallRate loop_rate(loop_hz);
@@ -195,15 +199,31 @@ int main(int argc, char *argv[])
 
         controller_main();
 
-        //constrain
-        if(((Motor_L_cmd <  DEADZONE_INPUT)&&(Motor_L_cmd>0)) || (Motor_L_cmd > -DEADZONE_INPUT)&&(Motor_L_cmd<0)) Motor_L_cmd=0;
-        if(Motor_L_cmd >  Lim_INPUT || Motor_L_cmd <  -Lim_INPUT) Motor_L_cmd=Motor_L_cmd > 0 ? Lim_INPUT : -Lim_INPUT;
+        // constrain
+        if (((Motor_L_cmd <  DEADZONE_INPUT) && (Motor_L_cmd > 0)) || 
+            (Motor_L_cmd > -DEADZONE_INPUT) && (Motor_L_cmd < 0)) 
+            Motor_L_cmd = 0;
+        if (Motor_L_cmd >  Lim_INPUT || Motor_L_cmd <  -Lim_INPUT) 
+            Motor_L_cmd = Motor_L_cmd > 0 ? Lim_INPUT : -Lim_INPUT;
 
         odrive_msg_0.data[0] = Motor_L_cmd;
-        RCLCPP_INFO(rclcpp::get_logger("controller"), "heading=%f thrust=%f leg=%f kill=%f u=%f", ref[0], ref[1], ref[2], ref[3], Motor_L_cmd);
+        RCLCPP_INFO(rclcpp::get_logger("controller"), 
+                    "heading=%f thrust=%f leg=%f kill=%f u=%f", 
+                    ref[0], ref[1], ref[2], ref[3], Motor_L_cmd);
         
         odrive_publisher_0->publish(odrive_msg_0);
-        // odrive_publisher_1->publish(odrive_msg_1);
+
+        // 새로 추가된 토픽들에 데이터를 퍼블리시 - Float64 메시지로 변경
+        std_msgs::msg::Float64 msg;
+
+        msg.data = ref_theta_dot*rad2deg;
+        ref_theta_dot_publisher->publish(msg);
+
+        msg.data = imu_theta*rad2deg;
+        imu_theta_publisher->publish(msg);
+
+        msg.data = imu_theta_dot*rad2deg;
+        imu_theta_dot_publisher->publish(msg);
         
         rclcpp::spin_some(node);
         loop_rate.sleep();

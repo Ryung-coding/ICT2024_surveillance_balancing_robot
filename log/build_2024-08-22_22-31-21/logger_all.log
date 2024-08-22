@@ -1,0 +1,243 @@
+[1.177s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.177s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f7ab5979490>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=16, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f7ab5979490>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f7ab54b7a90>)
+[1.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.232s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryung/Desktop/buf'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.238s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[1.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[1.240s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_cmake' and name 'controller'
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore'
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore_ament_install'
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_pkg']
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_pkg'
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_meta']
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_meta'
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ros']
+[1.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ros'
+[1.241s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odrive_controller' with type 'ros.ament_python' and name 'odrive_controller'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ignore', 'ignore_ament_install']
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore_ament_install'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_pkg']
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_pkg'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_meta']
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_meta'
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ros']
+[1.241s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ros'
+[1.241s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_reciver' with type 'ros.ament_python' and name 'serial_reciver'
+[1.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.387s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/ryung/Desktop/buf/install
+[1.407s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/ryung/Desktop/dubal_ws/install
+[1.427s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/ryung/Desktop/ros2_ws/install
+[1.451s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/foxy
+[1.452s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.524s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.524s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/buf/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/buf/install/controller', 'merge_install': False, 'path': '/home/ryung/Desktop/buf/src/controller', 'symlink_install': False, 'test_result_base': None}
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.544s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.544s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/buf/build/odrive_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/buf/install/odrive_controller', 'merge_install': False, 'path': '/home/ryung/Desktop/buf/src/odrive_controller', 'symlink_install': False, 'test_result_base': None}
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_args' from command line to 'None'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target' from command line to 'None'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_first' from command line to 'False'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_force_configure' from command line to 'False'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'ament_cmake_args' from command line to 'None'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.564s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.564s] DEBUG:colcon.colcon_core.verb:Building package 'serial_reciver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/buf/build/serial_reciver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/buf/install/serial_reciver', 'merge_install': False, 'path': '/home/ryung/Desktop/buf/src/serial_reciver', 'symlink_install': False, 'test_result_base': None}
+[1.583s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.603s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.603s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryung/Desktop/buf/src/controller' with build type 'ament_cmake'
+[1.603s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryung/Desktop/buf/src/controller'
+[1.624s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.624s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.624s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.731s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryung/Desktop/buf/src/odrive_controller' with build type 'ament_python'
+[1.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_controller', 'ament_prefix_path')
+[1.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.ps1'
+[1.752s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.dsv'
+[1.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.sh'
+[1.773s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.773s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.876s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryung/Desktop/buf/src/serial_reciver' with build type 'ament_python'
+[1.877s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_reciver', 'ament_prefix_path')
+[1.897s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.ps1'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.dsv'
+[1.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.sh'
+[1.919s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.919s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[2.145s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryung/Desktop/buf/src/odrive_controller'
+[2.166s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.166s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.393s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryung/Desktop/buf/src/serial_reciver'
+[2.415s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.415s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/buf/src/odrive_controller': PYTHONPATH=/home/ryung/Desktop/buf/build/odrive_controller/prefix_override:/home/ryung/Desktop/buf/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ryung/Desktop/buf/build/odrive_controller/build install --record /home/ryung/Desktop/buf/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed
+[2.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/buf/src/serial_reciver': PYTHONPATH=/home/ryung/Desktop/buf/build/serial_reciver/prefix_override:/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ryung/Desktop/buf/build/serial_reciver/build install --record /home/ryung/Desktop/buf/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed
+[2.914s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/buf/src/odrive_controller' returned '0': PYTHONPATH=/home/ryung/Desktop/buf/build/odrive_controller/prefix_override:/home/ryung/Desktop/buf/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ryung/Desktop/buf/build/odrive_controller/build install --record /home/ryung/Desktop/buf/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed
+[2.937s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller' for CMake module files
+[2.937s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller' for CMake config files
+[2.938s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller/lib'
+[2.938s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller/bin'
+[2.938s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller/lib/pkgconfig/odrive_controller.pc'
+[2.938s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller/lib/python3.8/site-packages'
+[2.938s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_controller', 'pythonpath')
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/pythonpath.ps1'
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/pythonpath.dsv'
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/hook/pythonpath.sh'
+[2.960s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/odrive_controller/bin'
+[2.960s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_controller)
+[2.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/package.ps1'
+[2.981s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/package.dsv'
+[2.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/package.sh'
+[2.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/package.bash'
+[2.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/odrive_controller/share/odrive_controller/package.zsh'
+[2.982s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/buf/install/odrive_controller/share/colcon-core/packages/odrive_controller)
+[2.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/buf/src/serial_reciver' returned '0': PYTHONPATH=/home/ryung/Desktop/buf/build/serial_reciver/prefix_override:/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ryung/Desktop/buf/build/serial_reciver/build install --record /home/ryung/Desktop/buf/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver' for CMake module files
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver' for CMake config files
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver/lib'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver/bin'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver/lib/pkgconfig/serial_reciver.pc'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages'
+[3.005s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_reciver', 'pythonpath')
+[3.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/pythonpath.ps1'
+[3.027s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/pythonpath.dsv'
+[3.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/hook/pythonpath.sh'
+[3.027s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/serial_reciver/bin'
+[3.027s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(serial_reciver)
+[3.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/package.ps1'
+[3.048s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/package.dsv'
+[3.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/package.sh'
+[3.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/package.bash'
+[3.049s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/serial_reciver/share/serial_reciver/package.zsh'
+[3.049s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/buf/install/serial_reciver/share/colcon-core/packages/serial_reciver)
+[5.725s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[5.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller
+[5.759s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[5.759s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller
+[5.788s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller' for CMake module files
+[5.788s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller' for CMake config files
+[5.788s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[5.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[5.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[5.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/bin'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib/pkgconfig/controller.pc'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib/python3.8/site-packages'
+[5.809s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/bin'
+[5.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.ps1'
+[5.829s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/buf/install/controller/share/controller/package.dsv'
+[5.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.sh'
+[5.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.bash'
+[5.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.zsh'
+[5.830s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/buf/install/controller/share/colcon-core/packages/controller)
+[5.862s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[5.882s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller' for CMake module files
+[5.882s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller' for CMake config files
+[5.882s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[5.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[5.903s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[5.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/buf/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/bin'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib/pkgconfig/controller.pc'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/lib/python3.8/site-packages'
+[5.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/buf/install/controller/bin'
+[5.923s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.ps1'
+[5.924s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/buf/install/controller/share/controller/package.dsv'
+[5.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.sh'
+[5.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.bash'
+[5.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/buf/install/controller/share/controller/package.zsh'
+[5.924s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/buf/install/controller/share/colcon-core/packages/controller)
+[5.925s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.925s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.925s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.925s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.948s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.948s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.948s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.957s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.979s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/buf/install/local_setup.ps1'
+[5.980s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryung/Desktop/buf/install/_local_setup_util_ps1.py'
+[5.980s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/buf/install/setup.ps1'
+[6.001s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/buf/install/local_setup.sh'
+[6.001s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryung/Desktop/buf/install/_local_setup_util_sh.py'
+[6.001s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/buf/install/setup.sh'
+[6.022s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/buf/install/local_setup.bash'
+[6.022s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/buf/install/setup.bash'
+[6.042s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/buf/install/local_setup.zsh'
+[6.043s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/buf/install/setup.zsh'

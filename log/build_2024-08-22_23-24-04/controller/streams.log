@@ -1,0 +1,28 @@
+[0.423s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.671s] [35m[1mScanning dependencies of target controller_main[0m
+[0.671s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[3.954s] [100%] [32m[1mLinking CXX executable controller_main[0m
+[4.110s] [100%] Built target controller_main
+[4.116s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[4.135s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller
+[4.141s] -- Install configuration: ""
+[4.141s] -- Installing: /home/ryung/Desktop/buf/install/controller/lib/controller/controller_main
+[4.142s] -- Set runtime path of "/home/ryung/Desktop/buf/install/controller/lib/controller/controller_main" to ""
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller//dubal_no_eye.py
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/ament_prefix_path.sh
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/ament_prefix_path.dsv
+[4.142s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/path.sh
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/path.dsv
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.bash
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.sh
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.zsh
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.dsv
+[4.143s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/package.dsv
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/packages/controller
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/cmake/controllerConfig.cmake
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/cmake/controllerConfig-version.cmake
+[4.143s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/package.xml
+[4.144s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller

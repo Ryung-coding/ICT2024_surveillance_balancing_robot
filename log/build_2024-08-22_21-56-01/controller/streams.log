@@ -1,0 +1,149 @@
+[0.429s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.678s] [35m[1mScanning dependencies of target controller_main[0m
+[0.678s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[1.196s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.196s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:181:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.196s]   181 | _theta_dot_publisher = node->create_publisher<std_msgs::msg::[01;31m[KFloat64[m[K>("/ref_theta_dot", 10);
+[1.196s]       |                                                              [01;31m[K^~~~~~~[m[K
+[1.197s] 
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:181:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:181:103:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [15], int)[m[K’
+[1.197s]   181 | create_publisher<std_msgs::msg::Float64>("/ref_theta_dot", 10[01;31m[K)[m[K;
+[1.197s]       |                                                              [01;31m[K^[m[K
+[1.197s] 
+[1.197s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+[1.197s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.197s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.197s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.197s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.197s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.197s]    71 | [01;36m[KNode[m[K::create_publisher(
+[1.197s]       | [01;36m[K^~~~[m[K
+[1.197s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:181:103:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.197s]   181 | create_publisher<std_msgs::msg::Float64>("/ref_theta_dot", 10[01;31m[K)[m[K;
+[1.197s]       |                                                              [01;31m[K^[m[K
+[1.197s] 
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:182:70:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.197s]   182 |  imu_theta_publisher = node->create_publisher<std_msgs::msg::[01;31m[KFloat64[m[K>("/imu_theta", 10);
+[1.197s]       |                                                              [01;31m[K^~~~~~~[m[K
+[1.197s] 
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:182:70:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.197s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:182:95:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [11], int)[m[K’
+[1.197s]   182 | de->create_publisher<std_msgs::msg::Float64>("/imu_theta", 10[01;31m[K)[m[K;
+[1.197s]       |                                                              [01;31m[K^[m[K
+[1.197s] 
+[1.198s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.198s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.198s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.198s]    71 | [01;36m[KNode[m[K::create_publisher(
+[1.198s]       | [01;36m[K^~~~[m[K
+[1.198s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:182:95:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.198s]   182 | de->create_publisher<std_msgs::msg::Float64>("/imu_theta", 10[01;31m[K)[m[K;
+[1.198s]       |                                                              [01;31m[K^[m[K
+[1.198s] 
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:183:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.198s]   183 | _theta_dot_publisher = node->create_publisher<std_msgs::msg::[01;31m[KFloat64[m[K>("/imu_theta_dot", 10);
+[1.198s]       |                                                              [01;31m[K^~~~~~~[m[K
+[1.198s] 
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:183:74:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:183:103:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [15], int)[m[K’
+[1.198s]   183 | create_publisher<std_msgs::msg::Float64>("/imu_theta_dot", 10[01;31m[K)[m[K;
+[1.198s]       |                                                              [01;31m[K^[m[K
+[1.198s] 
+[1.198s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:1224[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.198s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.198s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.198s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.198s]    71 | [01;36m[KNode[m[K::create_publisher(
+[1.198s]       | [01;36m[K^~~~[m[K
+[1.198s] [01m[K/opt/ros/foxy/include/rclcpp/node_impl.hpp:71:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:183:103:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.198s]   183 | create_publisher<std_msgs::msg::Float64>("/imu_theta_dot", 10[01;31m[K)[m[K;
+[1.198s]       |                                                              [01;31m[K^[m[K
+[1.198s] 
+[1.198s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:186:20:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.198s]   186 |     std_msgs::msg::[01;31m[KFloat64[m[K odrive_msg_1;
+[1.199s]       |                    [01;31m[K^~~~~~~[m[K
+[1.204s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:214:24:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.204s]   214 |         std_msgs::msg::[01;31m[KFloat64[m[K msg;
+[1.204s]       |                        [01;31m[K^~~~~~~[m[K
+[1.204s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[1.204s]   215 |         [01;31m[Kmsg[m[K.data = ref_theta_dot;
+[1.204s]       |         [01;31m[K^~~[m[K
+[1.204s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:9:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.204s] In file included from [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/duration.hpp:20[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/qos.hpp:20[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:34[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.204s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.205s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.205s] [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[1.205s]    26 | namespace [01;36m[Kmsg[m[K
+[1.205s]       |           [01;36m[K^~~[m[K
+[1.205s] In file included from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.205s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.205s] [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[1.205s]    26 | namespace [01;36m[Kmsg[m[K
+[1.205s]       |           [01;36m[K^~~[m[K
+[1.205s] In file included from [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:34[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.205s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[1.206s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.206s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.206s] [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[1.206s]    26 | namespace [01;36m[Kmsg[m[K
+[1.206s]       |           [01;36m[K^~~[m[K
+[1.206s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/joint_state__struct.hpp:19[m[K,
+[1.207s]                  from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/joint_state.hpp:7[m[K,
+[1.207s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:2[m[K:
+[1.207s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[1.207s]    30 | namespace [01;36m[Kmsg[m[K
+[1.207s]       |           [01;36m[K^~~[m[K
+[1.207s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/joint_state.hpp:7[m[K,
+[1.207s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:2[m[K:
+[1.207s] [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/joint_state__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+[1.207s]    30 | namespace [01;36m[Kmsg[m[K
+[1.207s]       |           [01;36m[K^~~[m[K
+[1.207s] In file included from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/detail/imu__struct.hpp:21[m[K,
+[1.207s]                  from [01m[K/opt/ros/foxy/include/sensor_msgs/msg/imu.hpp:7[m[K,
+[1.207s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:3[m[K:
+[1.207s] [01m[K/opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+[1.207s]    26 | namespace [01;36m[Kmsg[m[K
+[1.207s]       |           [01;36m[K^~~[m[K
+[1.207s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kref_theta_dot[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_theta_dot[m[K’?
+[1.207s]   215 |         msg.data = [01;31m[Kref_theta_dot[m[K;
+[1.207s]       |                    [01;31m[K^~~~~~~~~~~~~[m[K
+[1.208s]       |                    [32m[Kimu_theta_dot[m[K
+[2.135s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[2.136s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[2.136s] make: *** [Makefile:141: all] Error 2
+[2.138s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
