@@ -2,9 +2,9 @@
 #define CONTROLLER_MAIN
 
 // PID Controller Gains
-float Kp[4] = {0.0, 0.0, 0.0, 0.0};
-float Kd[4] = {0.0, 0.0, 0.0, 0.0};
-float Ki[4] = {0.0, 0.0, 0.0, 0.0};
+float Kp[4] = {0.0, 85.0, 0.0, 0.0};
+float Kd[4] = {0.0, 10.0, 0.0, 0.0};
+float Ki[4] = {0.0, 10.0, 0.0, 0.0};
 
 
 #include <cmath>
@@ -38,11 +38,14 @@ float I[4] = {0.0, 0.0, 0.0, 0.0};              // Integral term
 
 // IMU Data
 float imu_theta = 0.0; 
-float imu_theta_past = 0.0; 
 float imu_theta_dot = 0.0; 
+float imu_theta_dot_past = 0.0; 
+float imu_theta_ddot = 0.0;
+
 float imu_psi = 0.0; 
-float imu_psi_past = 0.0; 
 float imu_psi_dot = 0.0; 
+float imu_psi_dot_past = 0.0; 
+float imu_psi_ddot = 0.0; 
 
 // Motor Commands
 float Motor_L_cmd = 0.0; 

@@ -1,0 +1,21 @@
+[0.881s] Invoking command in '/home/ryung/Desktop/buf/src/serial_reciver': PYTHONPATH=/home/ryung/Desktop/buf/build/serial_reciver/prefix_override:/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ryung/Desktop/buf/build/serial_reciver/build install --record /home/ryung/Desktop/buf/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed
+[1.000s] running egg_info
+[1.001s] writing ../../build/serial_reciver/serial_reciver.egg-info/PKG-INFO
+[1.001s] writing dependency_links to ../../build/serial_reciver/serial_reciver.egg-info/dependency_links.txt
+[1.001s] writing entry points to ../../build/serial_reciver/serial_reciver.egg-info/entry_points.txt
+[1.001s] writing requirements to ../../build/serial_reciver/serial_reciver.egg-info/requires.txt
+[1.001s] writing top-level names to ../../build/serial_reciver/serial_reciver.egg-info/top_level.txt
+[1.019s] reading manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'
+[1.019s] writing manifest file '../../build/serial_reciver/serial_reciver.egg-info/SOURCES.txt'
+[1.019s] running build
+[1.019s] running build_py
+[1.020s] running install
+[1.020s] running install_lib
+[1.021s] running install_data
+[1.021s] running install_egg_info
+[1.022s] removing '/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info' (and everything under it)
+[1.022s] Copying ../../build/serial_reciver/serial_reciver.egg-info to /home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages/serial_reciver-0.0.0-py3.8.egg-info
+[1.023s] running install_scripts
+[1.033s] Installing serial_reciver_node script to /home/ryung/Desktop/buf/install/serial_reciver/lib/serial_reciver
+[1.033s] writing list of installed files to '/home/ryung/Desktop/buf/build/serial_reciver/install.log'
+[1.111s] Invoked command in '/home/ryung/Desktop/buf/src/serial_reciver' returned '0': PYTHONPATH=/home/ryung/Desktop/buf/build/serial_reciver/prefix_override:/home/ryung/Desktop/buf/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ryung/Desktop/buf/build/serial_reciver/build install --record /home/ryung/Desktop/buf/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed

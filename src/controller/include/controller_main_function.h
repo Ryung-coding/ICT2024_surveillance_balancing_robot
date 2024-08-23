@@ -63,18 +63,12 @@ void sbus_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
 
 void imu_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
 {   
-    //update
-    imu_theta_past = imu_theta;
-    imu_psi_past = imu_psi;
-    
     //smoothing
-    imu_theta = lowpassfilter(imu_theta, -msg->position[1], 0.01);                             
-    imu_psi = lowpassfilter(imu_psi, -msg->position[2], 0.01);          
-    
-    //step sync
-    if(abs(imu_theta-imu_theta_past)>0.0002) imu_theta_dot = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.1);
-    if(abs(imu_psi-imu_psi_past)>0.0002) imu_psi_dot = lowpassfilter(imu_psi_dot, (imu_psi - imu_psi_past)/dt, 0.01);
-    
+    imu_theta = lowpassfilter(imu_theta, -msg->position[1], 0.001);                             
+    imu_psi = lowpassfilter(imu_psi, -msg->position[2], 0.001);     
+
+    imu_theta_dot=lowpassfilter(imu_theta_dot, -msg->velocity[1], 0.001);         
+    imu_psi_dot=lowpassfilter(imu_psi_dot, -msg->velocity[2], 0.001);    
 }
 
 void gps_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
@@ -105,7 +99,7 @@ float computePID(float r, float y,float y_dot, float dt, int PID_case)
     if(abs(I[PID_case])>anti_windup_gain) I[PID_case]=I[PID_case]>0 ? anti_windup_gain : -anti_windup_gain; 
     
     //D gain
-    D = Kd[PID_case]*(0-y_dot);
+    float D = Kd[PID_case]*(0-y_dot);
 
     float u = P + I[PID_case] + D;
     return u;

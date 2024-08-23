@@ -1,0 +1,17 @@
+[0.424s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.676s] [35m[1mScanning dependencies of target controller_main[0m
+[0.676s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[1.283s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kfloat balancing_controller()[m[K’:
+[1.283s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:24:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kreturn[m[K’
+[1.283s]    24 | balancing_CMD=ref_theta
+[1.283s]       |                        [01;31m[K^[m[K
+[1.283s]       |                        [32m[K;[m[K
+[1.283s]    25 |     [32m[Kreturn[m[K ref_theta;
+[1.283s]       |     [32m[K~~~~~~[m[K              
+[1.283s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:26:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+[1.283s]    26 | [01;35m[K}[m[K
+[1.283s]       | [01;35m[K^[m[K
+[2.056s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[2.056s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[2.056s] make: *** [Makefile:141: all] Error 2
+[2.058s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16

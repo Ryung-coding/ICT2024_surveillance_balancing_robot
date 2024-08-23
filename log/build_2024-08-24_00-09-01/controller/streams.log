@@ -1,0 +1,28 @@
+[0.421s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.668s] [35m[1mScanning dependencies of target controller_main[0m
+[0.668s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[1.293s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[1.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.293s]                  from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:105:148:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+[1.293s]   105 |         RCLCPP_INFO(rclcpp::get_logger("controller"), "heading=%f thrust=%f Connect=%f kill=%f u=%f", computePID(ref[1], dubal_vel_value, 0, dt, 0)[01;31m[K;[m[K, ref[1], ref[3], ref[4], Motor_L_cmd);
+[1.293s]       |                                                                                                                                                    [01;31m[K^[m[K
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:105:9:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.293s]   105 |         [01;36m[KRCLCPP_INFO[m[K(rclcpp::get_logger("controller"), "heading=%f thrust=%f Connect=%f kill=%f u=%f", computePID(ref[1], dubal_vel_value, 0, dt, 0);, ref[1], ref[3], ref[4], Motor_L_cmd);
+[1.293s]       |         [01;36m[K^~~~~~~~~~~[m[K
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:105:149:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[1.293s]   105 |         RCLCPP_INFO(rclcpp::get_logger("controller"), "heading=%f thrust=%f Connect=%f kill=%f u=%f", computePID(ref[1], dubal_vel_value, 0, dt, 0);[01;31m[K,[m[K ref[1], ref[3], ref[4], Motor_L_cmd);
+[1.294s]       |                                                                                                                                                     [01;31m[K^[m[K
+[2.055s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[2.055s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[2.055s] make: *** [Makefile:141: all] Error 2
+[2.056s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
