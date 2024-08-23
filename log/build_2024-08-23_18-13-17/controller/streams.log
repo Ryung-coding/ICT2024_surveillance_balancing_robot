@@ -1,0 +1,11 @@
+[0.434s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.695s] [35m[1mScanning dependencies of target controller_main[0m
+[0.696s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[0.696s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:8:10:[m[K [01;31m[Kfatal error: [m[Kcontroller_main.h: No such file or directory
+[0.696s]     8 | #include [01;31m[K<controller_main.h>[m[K
+[0.696s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.697s] compilation terminated.
+[0.697s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[0.697s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[0.697s] make: *** [Makefile:141: all] Error 2
+[0.953s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16

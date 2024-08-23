@@ -1,0 +1,291 @@
+[35m[1mScanning dependencies of target controller_main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid butterworth()[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:16:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kwc[m[K’ was not declared in this scope
+   16 |   [01;31m[Kwc[m[K = tan(M_PI * cut_off_freq_current * dt);
+      |   [01;31m[K^~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:16:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kcut_off_freq_current[m[K’ was not declared in this scope
+   16 |   wc = tan(M_PI * [01;31m[Kcut_off_freq_current[m[K * dt);
+      |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:16:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope
+   16 |   wc = tan(M_PI * cut_off_freq_current * [01;31m[Kdt[m[K);
+      |                                          [01;31m[K^~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:17:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kwc2[m[K’ was not declared in this scope
+   17 |   [01;31m[Kwc2[m[K = wc*wc;
+      |   [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:19:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb0_2nd[m[K’ was not declared in this scope
+   19 |   [01;31m[Kb0_2nd[m[K = (wc2) / (1 + sqrt(2)*wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:20:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb1_2nd[m[K’ was not declared in this scope
+   20 |   [01;31m[Kb1_2nd[m[K = 2 * b0_2nd;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:21:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb2_2nd[m[K’ was not declared in this scope
+   21 |   [01;31m[Kb2_2nd[m[K = b0_2nd;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:22:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka0_2nd[m[K’ was not declared in this scope
+   22 |   [01;31m[Ka0_2nd[m[K = 1;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:23:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka1_2nd[m[K’ was not declared in this scope
+   23 |   [01;31m[Ka1_2nd[m[K = 2 * (wc2 - 1) / (1 + sqrt(2) * wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:24:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka2_2nd[m[K’ was not declared in this scope
+   24 |   [01;31m[Ka2_2nd[m[K = (1 - sqrt(2) * wc + wc2) / (1 + sqrt(2) * wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:27:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbw2_filtered_current_1_input[m[K’ was not declared in this scope
+   27 |   [01;31m[Kbw2_filtered_current_1_input[m[K[2] = imu_theta;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:27:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta[m[K’ was not declared in this scope
+   27 |   bw2_filtered_current_1_input[2] = [01;31m[Kimu_theta[m[K;
+      |                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:29:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbw2_filtered_current_1_output[m[K’ was not declared in this scope
+   29 |   [01;31m[Kbw2_filtered_current_1_output[m[K[2] = b0_2nd * bw2_filtered_current_1_input[2] + b1_2nd * bw2_filtered_current_1_input[1] + b2_2nd * bw2_filtered_current_1_input[0] - a1_2nd * bw2_filtered_current_1_output[1] - a2_2nd * bw2_filtered_current_1_output[0];
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kfloat dead_zone_calibration(float)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:56:16:[m[K [01;31m[Kerror: [m[K‘[01m[KDEADZONE_SBUS[m[K’ was not declared in this scope
+   56 |     if (data > [01;31m[KDEADZONE_SBUS[m[K)
+      |                [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid sbus_callback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksbus_data[m[K’ was not declared in this scope
+   66 |     [01;31m[Ksbus_data[m[K[0] = 100.*(msg->position[0] - sbus_center)/sbus_Range;  // SBUS ch1 : Heading angle stick
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:66:45:[m[K [01;31m[Kerror: [m[K‘[01m[Ksbus_center[m[K’ was not declared in this scope
+   66 |     sbus_data[0] = 100.*(msg->position[0] - [01;31m[Ksbus_center[m[K)/sbus_Range;  // SBUS ch1 : Heading angle stick
+      |                                             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:66:58:[m[K [01;31m[Kerror: [m[K‘[01m[Ksbus_Range[m[K’ was not declared in this scope
+   66 |     sbus_data[0] = 100.*(msg->position[0] - sbus_center)/[01;31m[Ksbus_Range[m[K;  // SBUS ch1 : Heading angle stick
+      |                                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:67:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kref[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::ref[m[K’?
+   67 |     [01;31m[Kref[m[K[0] = lowpassfilter(ref[0], sbus_data[0], 0.1);
+      |     [01;31m[K^~~[m[K
+      |     [32m[Kstd::ref[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:54[m[K,
+                 from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/refwrap.h:370:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ref[m[K’ declared here
+  370 |     [01;36m[Kref[m[K(reference_wrapper<_Tp> __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:75:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kleg_down_bound[m[K’ was not declared in this scope
+   75 |     ref[2] = lowpassfilter(ref[2], sbus_data[2] > [01;31m[Kleg_down_bound[m[K ? -1 : (sbus_data[2] > leg_up_bound ? 0 : 1), 0.2);
+      |                                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:75:89:[m[K [01;31m[Kerror: [m[K‘[01m[Kleg_up_bound[m[K’ was not declared in this scope
+   75 | ref[2], sbus_data[2] > leg_down_bound ? -1 : (sbus_data[2] > [01;31m[Kleg_up_bound[m[K ? 0 : 1), 0.2);
+      |                                                              [01;31m[K^~~~~~~~~~~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:79:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kkill_bound[m[K’ was not declared in this scope; did you mean ‘[01m[Kllround[m[K’?
+   79 |     ref[3] = lowpassfilter(ref[3], sbus_data[3] > [01;31m[Kkill_bound[m[K ? 1 : 0, 0.9);
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+      |                                                   [32m[Kllround[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta_past[m[K’ was not declared in this scope
+   88 |     [01;31m[Kimu_theta_past[m[K = imu_theta;
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:88:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta[m[K’ was not declared in this scope
+   88 |     imu_theta_past = [01;31m[Kimu_theta[m[K;
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:89:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_psi_past[m[K’ was not declared in this scope
+   89 |     [01;31m[Kimu_psi_past[m[K = imu_psi;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:89:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_psi[m[K’ was not declared in this scope
+   89 |     imu_psi_past = [01;31m[Kimu_psi[m[K;
+      |                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:91:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeg2rad[m[K’ was not declared in this scope
+   91 | _theta = lowpassfilter(imu_theta, -msg->angular_velocity.y * [01;31m[Kdeg2rad[m[K, 0.01);                                         //rad
+      |                                                              [01;31m[K^~~~~~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:96:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta_dot[m[K’ was not declared in this scope
+   96 |         [01;31m[Kimu_theta_dot[m[K = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/dt, 0.1);    //rad/s
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:96:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope
+   96 |  = lowpassfilter(imu_theta_dot, (imu_theta - imu_theta_past)/[01;31m[Kdt[m[K, 0.1);    //rad/s
+      |                                                              [01;31m[K^~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:100:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_psi_dot[m[K’ was not declared in this scope
+  100 |     [01;31m[Kimu_psi_dot[m[K = lowpassfilter(imu_psi_dot, (imu_psi - imu_psi_past)/dt, 0.01);            //rad/s
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:100:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope
+  100 | si_dot = lowpassfilter(imu_psi_dot, (imu_psi - imu_psi_past)/[01;31m[Kdt[m[K, 0.01);            //rad/s
+      |                                                              [01;31m[K^~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kfloat computePID(float, float, float, int, float, float, float)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:110:5:[m[K [01;31m[Kerror: [m[K‘[01m[KI[m[K’ was not declared in this scope
+  110 |     [01;31m[KI[m[K[i] += Ki * error * dt;
+      |     [01;31m[K^[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:121:5:[m[K [01;31m[Kerror: [m[K‘[01m[KD[m[K’ was not declared in this scope
+  121 |     [01;31m[KD[m[K[i] = lowpassfilter(D[i],-Kd*(y - y_past[i])/dt,0.1);
+      |     [01;31m[K^[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:121:40:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_past[m[K’ was not declared in this scope
+  121 |     D[i] = lowpassfilter(D[i],-Kd*(y - [01;31m[Ky_past[m[K[i])/dt,0.1);
+      |                                        [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid controller_main()[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:134:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kref[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::ref[m[K’?
+  134 |     [01;31m[Kref[m[K[2]=-3*deg2rad; //example
+      |     [01;31m[K^~~[m[K
+      |     [32m[Kstd::ref[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:54[m[K,
+                 from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/refwrap.h:370:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ref[m[K’ declared here
+  370 |     [01;36m[Kref[m[K(reference_wrapper<_Tp> __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:134:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeg2rad[m[K’ was not declared in this scope
+  134 |     ref[2]=-3*[01;31m[Kdeg2rad[m[K; //example
+      |               [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kref_theta_dot[m[K’ was not declared in this scope
+  136 |     [01;31m[Kref_theta_dot[m[K = computePID(ref[2], imu_theta, dt, 1, Kp1, Ki1, Kd1); //ref_theta
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta[m[K’ was not declared in this scope
+  136 |     ref_theta_dot = computePID(ref[2], [01;31m[Kimu_theta[m[K, dt, 1, Kp1, Ki1, Kd1); //ref_theta
+      |                                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope
+  136 |     ref_theta_dot = computePID(ref[2], imu_theta, [01;31m[Kdt[m[K, 1, Kp1, Ki1, Kd1); //ref_theta
+      |                                                   [01;31m[K^~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:58:[m[K [01;31m[Kerror: [m[K‘[01m[KKp1[m[K’ was not declared in this scope
+  136 |     ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, [01;31m[KKp1[m[K, Ki1, Kd1); //ref_theta
+      |                                                          [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:63:[m[K [01;31m[Kerror: [m[K‘[01m[KKi1[m[K’ was not declared in this scope
+  136 |    ref_theta_dot = computePID(ref[2], imu_theta, dt, 1, Kp1, [01;31m[KKi1[m[K, Kd1); //ref_theta
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:136:68:[m[K [01;31m[Kerror: [m[K‘[01m[KKd1[m[K’ was not declared in this scope
+  136 | f_theta_dot = computePID(ref[2], imu_theta, dt, 1, Kp1, Ki1, [01;31m[KKd1[m[K); //ref_theta
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:139:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbalancing_CMD[m[K’ was not declared in this scope
+  139 |     [01;31m[Kbalancing_CMD[m[K = computePID(ref_theta_dot, imu_theta_dot, dt, 2, Kp2, Ki2, Kd2); //ref_theta_dot
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:139:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta_dot[m[K’ was not declared in this scope
+  139 |     balancing_CMD = computePID(ref_theta_dot, [01;31m[Kimu_theta_dot[m[K, dt, 2, Kp2, Ki2, Kd2); //ref_theta_dot
+      |                                               [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:139:69:[m[K [01;31m[Kerror: [m[K‘[01m[KKp2[m[K’ was not declared in this scope
+  139 | ancing_CMD = computePID(ref_theta_dot, imu_theta_dot, dt, 2, [01;31m[KKp2[m[K, Ki2, Kd2); //ref_theta_dot
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:139:74:[m[K [01;31m[Kerror: [m[K‘[01m[KKi2[m[K’ was not declared in this scope
+  139 | g_CMD = computePID(ref_theta_dot, imu_theta_dot, dt, 2, Kp2, [01;31m[KKi2[m[K, Kd2); //ref_theta_dot
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:139:79:[m[K [01;31m[Kerror: [m[K‘[01m[KKd2[m[K’ was not declared in this scope
+  139 |  = computePID(ref_theta_dot, imu_theta_dot, dt, 2, Kp2, Ki2, [01;31m[KKd2[m[K); //ref_theta_dot
+      |                                                              [01;31m[K^~~[m[K
+
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kheading_CMD[m[K’ was not declared in this scope
+  142 |     [01;31m[Kheading_CMD[m[K = computePID(ref[0], imu_psi_dot, dt, 3, Kp3, Ki3, Kd3);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:142:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_psi_dot[m[K’ was not declared in this scope
+  142 |     heading_CMD = computePID(ref[0], [01;31m[Kimu_psi_dot[m[K, dt, 3, Kp3, Ki3, Kd3);
+      |                                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:142:58:[m[K [01;31m[Kerror: [m[K‘[01m[KKp3[m[K’ was not declared in this scope
+  142 |     heading_CMD = computePID(ref[0], imu_psi_dot, dt, 3, [01;31m[KKp3[m[K, Ki3, Kd3);
+      |                                                          [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:142:63:[m[K [01;31m[Kerror: [m[K‘[01m[KKi3[m[K’ was not declared in this scope
+  142 |     heading_CMD = computePID(ref[0], imu_psi_dot, dt, 3, Kp3, [01;31m[KKi3[m[K, Kd3);
+      |                                                               [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:142:68:[m[K [01;31m[Kerror: [m[K‘[01m[KKd3[m[K’ was not declared in this scope
+  142 |     heading_CMD = computePID(ref[0], imu_psi_dot, dt, 3, Kp3, Ki3, [01;31m[KKd3[m[K);
+      |                                                                    [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:144:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMotor_L_cmd[m[K’ was not declared in this scope
+  144 |     [01;31m[KMotor_L_cmd[m[K=balancing_CMD - heading_CMD;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:167:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKp0[m[K’ was not declared in this scope
+  167 |     [01;31m[KKp0[m[K = node->get_parameter("Kp0").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:168:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKi0[m[K’ was not declared in this scope
+  168 |     [01;31m[KKi0[m[K = node->get_parameter("Ki0").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:169:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKd0[m[K’ was not declared in this scope
+  169 |     [01;31m[KKd0[m[K = node->get_parameter("Kd0").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:170:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKp1[m[K’ was not declared in this scope
+  170 |     [01;31m[KKp1[m[K = node->get_parameter("Kp1").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:171:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKi1[m[K’ was not declared in this scope
+  171 |     [01;31m[KKi1[m[K = node->get_parameter("Ki1").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:172:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKd1[m[K’ was not declared in this scope
+  172 |     [01;31m[KKd1[m[K = node->get_parameter("Kd1").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:173:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKp2[m[K’ was not declared in this scope
+  173 |     [01;31m[KKp2[m[K = node->get_parameter("Kp2").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:174:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKi2[m[K’ was not declared in this scope
+  174 |     [01;31m[KKi2[m[K = node->get_parameter("Ki2").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:175:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKd2[m[K’ was not declared in this scope
+  175 |     [01;31m[KKd2[m[K = node->get_parameter("Kd2").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:176:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKp3[m[K’ was not declared in this scope
+  176 |     [01;31m[KKp3[m[K = node->get_parameter("Kp3").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:177:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKi3[m[K’ was not declared in this scope
+  177 |     [01;31m[KKi3[m[K = node->get_parameter("Ki3").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:178:5:[m[K [01;31m[Kerror: [m[K‘[01m[KKd3[m[K’ was not declared in this scope
+  178 |     [01;31m[KKd3[m[K = node->get_parameter("Kd3").as_double();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:196:5:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kasctime[m[K’?
+  196 |     [01;31m[Klast_time[m[K = node->now();
+      |     [01;31m[K^~~~~~~~~[m[K
+      |     [32m[Kasctime[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:197:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kloop_hz[m[K’ was not declared in this scope
+  197 |     rclcpp::WallRate loop_rate([01;31m[Kloop_hz[m[K);
+      |                                [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:203:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt[m[K’ was not declared in this scope
+  203 |         [01;31m[Kdt[m[K = (current_time - last_time).seconds();
+      |         [01;31m[K^~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:209:15:[m[K [01;31m[Kerror: [m[K‘[01m[KMotor_L_cmd[m[K’ was not declared in this scope
+  209 |         if ((([01;31m[KMotor_L_cmd[m[K <  DEADZONE_INPUT) && (Motor_L_cmd > 0)) ||
+      |               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:209:30:[m[K [01;31m[Kerror: [m[K‘[01m[KDEADZONE_INPUT[m[K’ was not declared in this scope
+  209 |         if (((Motor_L_cmd <  [01;31m[KDEADZONE_INPUT[m[K) && (Motor_L_cmd > 0)) ||
+      |                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:212:13:[m[K [01;31m[Kerror: [m[K‘[01m[KMotor_L_cmd[m[K’ was not declared in this scope
+  212 |         if ([01;31m[KMotor_L_cmd[m[K >  Lim_INPUT || Motor_L_cmd <  -Lim_INPUT)
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:212:28:[m[K [01;31m[Kerror: [m[K‘[01m[KLim_INPUT[m[K’ was not declared in this scope
+  212 |         if (Motor_L_cmd >  [01;31m[KLim_INPUT[m[K || Motor_L_cmd <  -Lim_INPUT)
+      |                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:215:32:[m[K [01;31m[Kerror: [m[K‘[01m[KMotor_L_cmd[m[K’ was not declared in this scope
+  215 |         odrive_msg_0.data[0] = [01;31m[KMotor_L_cmd[m[K;
+      |                                [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:218:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kref[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::ref[m[K’?
+  218 |                     [01;31m[Kref[m[K[0], ref[1], ref[2], ref[3], Motor_L_cmd);
+      |                     [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/bits/shared_ptr_base.h:54[m[K,
+                 from [01m[K/usr/include/c++/9/bits/shared_ptr.h:52[m[K,
+                 from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/refwrap.h:370:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ref[m[K’ declared here
+  370 |     [01;36m[Kref[m[K(reference_wrapper<_Tp> __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:225:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kref_theta_dot[m[K’ was not declared in this scope
+  225 |         msg.data = [01;31m[Kref_theta_dot[m[K*rad2deg;
+      |                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:225:34:[m[K [01;31m[Kerror: [m[K‘[01m[Krad2deg[m[K’ was not declared in this scope
+  225 |         msg.data = ref_theta_dot*[01;31m[Krad2deg[m[K;
+      |                                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:228:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta[m[K’ was not declared in this scope
+  228 |         msg.data = [01;31m[Kimu_theta[m[K*rad2deg;
+      |                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:231:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_theta_dot[m[K’ was not declared in this scope
+  231 |         msg.data = [01;31m[Kimu_theta_dot[m[K*rad2deg;
+      |                    [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

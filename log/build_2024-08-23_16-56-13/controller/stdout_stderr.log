@@ -1,0 +1,45 @@
+[35m[1mScanning dependencies of target controller_main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid butterworth()[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:57:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kwc[m[K’ was not declared in this scope
+   57 |   [01;31m[Kwc[m[K = tan(M_PI * cut_off_freq_current * time_loop);
+      |   [01;31m[K^~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:57:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kcut_off_freq_current[m[K’ was not declared in this scope
+   57 |   wc = tan(M_PI * [01;31m[Kcut_off_freq_current[m[K * time_loop);
+      |                   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:57:42:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime_loop[m[K’ was not declared in this scope
+   57 |   wc = tan(M_PI * cut_off_freq_current * [01;31m[Ktime_loop[m[K);
+      |                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:58:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kwc2[m[K’ was not declared in this scope
+   58 |   [01;31m[Kwc2[m[K = wc*wc;
+      |   [01;31m[K^~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:60:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb0_2nd[m[K’ was not declared in this scope
+   60 |   [01;31m[Kb0_2nd[m[K = (wc2) / (1 + sqrt(2)*wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:61:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb1_2nd[m[K’ was not declared in this scope
+   61 |   [01;31m[Kb1_2nd[m[K = 2 * b0_2nd;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:62:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kb2_2nd[m[K’ was not declared in this scope
+   62 |   [01;31m[Kb2_2nd[m[K = b0_2nd;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:63:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka0_2nd[m[K’ was not declared in this scope
+   63 |   [01;31m[Ka0_2nd[m[K = 1;
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:64:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka1_2nd[m[K’ was not declared in this scope
+   64 |   [01;31m[Ka1_2nd[m[K = 2 * (wc2 - 1) / (1 + sqrt(2) * wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:65:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ka2_2nd[m[K’ was not declared in this scope
+   65 |   [01;31m[Ka2_2nd[m[K = (1 - sqrt(2) * wc + wc2) / (1 + sqrt(2) * wc + wc2);
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:68:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbw2_filtered_current_1_input[m[K’ was not declared in this scope
+   68 |   [01;31m[Kbw2_filtered_current_1_input[m[K[2] = tau_measured[0];
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:68:37:[m[K [01;31m[Kerror: [m[K‘[01m[Ktau_measured[m[K’ was not declared in this scope
+   68 |   bw2_filtered_current_1_input[2] = [01;31m[Ktau_measured[m[K[0];
+      |                                     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:70:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbw2_filtered_current_1_output[m[K’ was not declared in this scope
+   70 |   [01;31m[Kbw2_filtered_current_1_output[m[K[2] = b0_2nd * bw2_filtered_current_1_input[2] + b1_2nd * bw2_filtered_current_1_input[1] + b2_2nd * bw2_filtered_current_1_input[0] - a1_2nd * bw2_filtered_current_1_output[1] - a2_2nd * bw2_filtered_current_1_output[0];
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

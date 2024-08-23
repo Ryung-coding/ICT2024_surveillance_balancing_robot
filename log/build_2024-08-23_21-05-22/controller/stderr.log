@@ -1,0 +1,18 @@
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:8:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kflaot[m[K’ does not name a type; did you mean ‘[01m[Kfloat[m[K’?
+    8 | [01;31m[Kflaot[m[K balancing_controller()
+      | [01;31m[K^~~~~[m[K
+      | [32m[Kfloat[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:22:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kflaot[m[K’ does not name a type; did you mean ‘[01m[Kfloat[m[K’?
+   22 | [01;31m[Kflaot[m[K heading_controller()
+      | [01;31m[K^~~~~[m[K
+      | [32m[Kfloat[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:63:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kbalancing_controller[m[K’ was not declared in this scope
+   63 |         balancing_CMD = [01;31m[Kbalancing_controller[m[K();
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:64:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kheading_controller[m[K’ was not declared in this scope
+   64 |         heading_CMD = [01;31m[Kheading_controller[m[K();
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

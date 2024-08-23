@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(controller)
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -19,5 +20,11 @@ install(
   DIRECTORY launch/
   DESTINATION share/${PROJECT_NAME}/
 )
+
+#include 파일 포함구문
+include_directories(
+  include
+)
+
 
 ament_package()

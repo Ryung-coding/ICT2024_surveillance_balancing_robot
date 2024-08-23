@@ -12,8 +12,8 @@ resource/serial_reciver
 serial_reciver/SerialHandler.py
 serial_reciver/__init__.py
 serial_reciver/imu_receiver.py
-serial_reciver/sbus_receiver.py
 serial_reciver/serial_reciver_node.py
+serial_reciver/teensy_receiver.py
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py

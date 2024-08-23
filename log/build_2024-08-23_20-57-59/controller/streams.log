@@ -1,0 +1,18 @@
+[0.424s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[0.673s] [35m[1mScanning dependencies of target controller_main[0m
+[0.673s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[1.284s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid balancing_controller()[m[K’:
+[1.284s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:14:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kradians[m[K’ was not declared in this scope
+[1.284s]    14 |     ref_theta=[01;31m[Kradians[m[K(-3); //example
+[1.284s]       |               [01;31m[K^~~~~~~[m[K
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.293s] [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:61:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kheading_controller[m[K’
+[1.293s]    61 |         balancing_controller()
+[1.293s]       |                               [01;31m[K^[m[K
+[1.293s]       |                               [32m[K;[m[K
+[1.294s]    62 |         [32m[Kheading_controller[m[K()
+[1.294s]       |         [32m[K~~~~~~~~~~~~~~~~~~[m[K     
+[2.063s] make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+[2.064s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+[2.064s] make: *** [Makefile:141: all] Error 2
+[2.066s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
