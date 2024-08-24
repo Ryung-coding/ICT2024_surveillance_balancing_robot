@@ -15,7 +15,7 @@ void balancing_controller()
     float ref_theta = computePID(0, dubal_pos_value*3.141592/180, 0, dt, 0);
     
     // Attitude PID | Err_theta -> desired theta_dot 
-    ref_theta_dot = computePID(0.1*ref[1], imu_theta, imu_theta_dot, dt, 1);
+    ref_theta_dot = computePID(-0.0023*ref[1], imu_theta, imu_theta_dot, dt, 1);
     
     // Attitude PID | Err_theta_dot -> motor Input CMD for balancing 
     imu_theta_ddot = lowpassfilter(imu_theta_ddot, (imu_theta_dot - imu_theta_dot_past) / dt, 0.1);  

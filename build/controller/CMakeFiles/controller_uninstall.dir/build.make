@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ryung/Desktop/buf/src/controller
+CMAKE_SOURCE_DIR = /home/ionia/Desktop/dubal_ws/src/controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ryung/Desktop/buf/build/controller
+CMAKE_BINARY_DIR = /home/ionia/Desktop/dubal_ws/build/controller
 
 # Utility rule file for controller_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ryung/Desktop/buf/build/controller
 include CMakeFiles/controller_uninstall.dir/progress.make
 
 CMakeFiles/controller_uninstall:
-	/usr/bin/cmake -P /home/ryung/Desktop/buf/build/controller/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/ionia/Desktop/dubal_ws/build/controller/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 controller_uninstall: CMakeFiles/controller_uninstall
 controller_uninstall: CMakeFiles/controller_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/controller_uninstall.dir/clean:
 .PHONY : CMakeFiles/controller_uninstall.dir/clean
 
 CMakeFiles/controller_uninstall.dir/depend:
-	cd /home/ryung/Desktop/buf/build/controller && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ryung/Desktop/buf/src/controller /home/ryung/Desktop/buf/src/controller /home/ryung/Desktop/buf/build/controller /home/ryung/Desktop/buf/build/controller /home/ryung/Desktop/buf/build/controller/CMakeFiles/controller_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ionia/Desktop/dubal_ws/build/controller && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ionia/Desktop/dubal_ws/src/controller /home/ionia/Desktop/dubal_ws/src/controller /home/ionia/Desktop/dubal_ws/build/controller /home/ionia/Desktop/dubal_ws/build/controller /home/ionia/Desktop/dubal_ws/build/controller/CMakeFiles/controller_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/controller_uninstall.dir/depend
 

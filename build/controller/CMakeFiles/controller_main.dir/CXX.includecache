@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ryung/Desktop/buf/src/controller/include/controller_main.h
+/home/ionia/Desktop/dubal_ws/src/controller/include/controller_main.h
 cmath
 -
 eigen3/Eigen/Core
@@ -14,9 +14,9 @@ eigen3/Eigen/Core
 eigen3/Eigen/Dense
 -
 
-/home/ryung/Desktop/buf/src/controller/include/controller_main_function.h
+/home/ionia/Desktop/dubal_ws/src/controller/include/controller_main_function.h
 
-/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp
+/home/ionia/Desktop/dubal_ws/src/controller/src/controller_main.cpp
 rclcpp/rclcpp.hpp
 -
 sensor_msgs/msg/joint_state.hpp

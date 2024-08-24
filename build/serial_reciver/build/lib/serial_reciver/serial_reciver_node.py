@@ -127,7 +127,7 @@ class IMUReceiver:
 class DataPublisher(Node):
     def __init__(self):
         super().__init__('data_publisher')
-        self.teensy_receiver = TeensyReceiver('/dev/ttyACM0', 921600)
+        self.teensy_receiver = TeensyReceiver('/dev/ttyACM2', 921600)
         self.imu_receiver = IMUReceiver('/dev/ttyUSB1', 921600)
 
         self.sbus_pub = self.create_publisher(JointState, 'sbus_data', 10)
