@@ -1,15 +1,16 @@
 #ifndef CONTROLLER_MAIN
 #define CONTROLLER_MAIN
 
-// PID Controller Gains
-float Kp[4] = {0.0, 85.0, 0.0, 0.0};
-float Kd[4] = {0.0, 10.0, 0.0, 0.0};
-float Ki[4] = {0.0, 10.0, 0.0, 0.0};
-
-
 #include <cmath>
-#include <eigen3/Eigen/Core>
-#include <eigen3/Eigen/Dense>
+#include <rclcpp/rclcpp.hpp>
+#include <sensor_msgs/msg/joint_state.hpp>
+#include <std_msgs/msg/float64_multi_array.hpp>
+
+// PID Controller Gains
+float Kp[4] = {0.0023, 85.000, 0.0000, 0.0000};
+float Kd[4] = {0.0000, 10.000, 0.0000, 0.0000};
+float Ki[4] = {0.0000, 10.000, 0.0000, 0.0000};
+
 
 // Control Constants
 #define loop_hz 100
@@ -33,7 +34,7 @@ float Ki[4] = {0.0, 10.0, 0.0, 0.0};
 
 // Controller Values
 float sbus_data[5] = {0.0, 0.0, 0.0, 0.0, 0.0}; // Raw signal data
-float ref[5] = {0.0, 0.0, 0.0, 0.0, 0.0};       // Filtered & transferred signal data { Heading Angle Velocity | Thrust Velocity | Leg Case | Kill }
+float ref[5] = {0.0, 0.0, 0.0, 0.0, 0.0};       // Filtered & transferred signal data { Heading Angle Velocity | Thrust Velocity | Leg Case | Web Connect  | Kill }
 float I[4] = {0.0, 0.0, 0.0, 0.0};              // Integral term
 
 // IMU Data
@@ -53,6 +54,12 @@ float Motor_R_cmd = 0.0;
 float balancing_CMD = 0.0; 
 float heading_CMD = 0.0;
 float ref_theta_dot = 0.0;
+
+// Motor Commands
+float odrive_L_pos = 0.0f;
+float odrive_R_pos = 0.0f;
+float odrive_L_vel = 0.0f;
+float odrive_R_vel = 0.0f;
 
 // State Flags
 bool isKilled = true;
@@ -75,32 +82,5 @@ float second = 0.0;
 float dt = 1.0 / loop_hz;
 rclcpp::Time last_time;
 
-// 2nd Order Low-Pass Filter Variables
-Eigen::Vector3d bw_2nd_output;
-Eigen::Vector3d bw_2nd_input;
-
-// 2nd Order Filtered Current Variables
-Eigen::Vector3d bw2_filtered_current_1_input;
-Eigen::Vector3d bw2_filtered_current_1_output;
-
-// Cut-Off Frequency Variables
-double wc;
-double wc2;
-double wc4;
-double wc3;
-double wc_4th;
-double wc2_4th;
-double cut_off_freq_current;
-
-// 2nd Order Filter Coefficients
-double b0_2nd;
-double b1_2nd;
-double b2_2nd;
-double a0_2nd;
-double a1_2nd;
-double a2_2nd;
-
-// Cut-Off Frequency
-float Cut_Off_Freq;
 
 #endif // CONTROLLER_MAIN

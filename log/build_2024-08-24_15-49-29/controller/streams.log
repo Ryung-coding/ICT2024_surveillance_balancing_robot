@@ -1,0 +1,68 @@
+[0.421s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake /home/ryung/Desktop/buf/src/controller -DCMAKE_INSTALL_PREFIX=/home/ryung/Desktop/buf/install/controller
+[0.679s] -- The C compiler identification is GNU 9.4.0
+[0.679s] -- The CXX compiler identification is GNU 9.4.0
+[0.679s] -- Check for working C compiler: /usr/bin/cc
+[0.679s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.679s] -- Detecting C compiler ABI info
+[0.679s] -- Detecting C compiler ABI info - done
+[0.679s] -- Detecting C compile features
+[0.679s] -- Detecting C compile features - done
+[0.679s] -- Check for working CXX compiler: /usr/bin/c++
+[0.679s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.680s] -- Detecting CXX compiler ABI info
+[0.711s] -- Detecting CXX compiler ABI info - done
+[0.717s] -- Detecting CXX compile features
+[0.717s] -- Detecting CXX compile features - done
+[0.723s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.741s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.742s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.866s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.907s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.913s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.968s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.986s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.040s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.084s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.086s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.087s] -- Looking for pthread.h
+[1.126s] -- Looking for pthread.h - found
+[1.127s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.170s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.170s] -- Looking for pthread_create in pthreads
+[1.204s] -- Looking for pthread_create in pthreads - not found
+[1.204s] -- Looking for pthread_create in pthread
+[1.247s] -- Looking for pthread_create in pthread - found
+[1.248s] -- Found Threads: TRUE  
+[1.353s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.461s] -- Configuring done
+[1.466s] -- Generating done
+[1.467s] -- Build files have been written to: /home/ryung/Desktop/buf/build/controller
+[1.473s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake /home/ryung/Desktop/buf/src/controller -DCMAKE_INSTALL_PREFIX=/home/ryung/Desktop/buf/install/controller
+[1.473s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[1.497s] [35m[1mScanning dependencies of target controller_main[0m
+[1.526s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_main.dir/src/controller_main.cpp.o[0m
+[4.581s] [100%] [32m[1mLinking CXX executable controller_main[0m
+[4.730s] [100%] Built target controller_main
+[4.736s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/buf/build/controller -- -j16 -l16
+[4.755s] Invoking command in '/home/ryung/Desktop/buf/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller
+[4.759s] -- Install configuration: ""
+[4.759s] -- Installing: /home/ryung/Desktop/buf/install/controller/lib/controller/controller_main
+[4.761s] -- Set runtime path of "/home/ryung/Desktop/buf/install/controller/lib/controller/controller_main" to ""
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller//dubal_no_eye.py
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/ament_prefix_path.sh
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/environment/ament_prefix_path.dsv
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/environment/path.sh
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/environment/path.dsv
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.bash
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.sh
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.zsh
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/local_setup.dsv
+[4.761s] -- Installing: /home/ryung/Desktop/buf/install/controller/share/controller/package.dsv
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/ament_index/resource_index/packages/controller
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/cmake/controllerConfig.cmake
+[4.761s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/cmake/controllerConfig-version.cmake
+[4.762s] -- Up-to-date: /home/ryung/Desktop/buf/install/controller/share/controller/package.xml
+[4.762s] Invoked command in '/home/ryung/Desktop/buf/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/buf/install/serial_reciver:/home/ryung/Desktop/buf/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/two_wheel_demo:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_driver:/home/ryung/Desktop/dubal_ws/install/eye_dubal:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/buf/build/controller

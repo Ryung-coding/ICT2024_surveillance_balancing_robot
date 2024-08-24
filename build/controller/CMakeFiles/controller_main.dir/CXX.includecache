@@ -6,23 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/ionia/Desktop/dubal_ws/src/controller/include/controller_main.h
+/home/ryung/Desktop/buf/src/controller/include/controller_main.h
 cmath
 -
-eigen3/Eigen/Core
--
-eigen3/Eigen/Dense
--
-
-/home/ionia/Desktop/dubal_ws/src/controller/include/controller_main_function.h
-
-/home/ionia/Desktop/dubal_ws/src/controller/src/controller_main.cpp
 rclcpp/rclcpp.hpp
 -
 sensor_msgs/msg/joint_state.hpp
 -
 std_msgs/msg/float64_multi_array.hpp
 -
+
+/home/ryung/Desktop/buf/src/controller/include/controller_main_function.h
+
+/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp
 controller_main.h
 -
 controller_main_function.h

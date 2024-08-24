@@ -14,35 +14,24 @@ class ODriveController(Node):
     def __init__(self):
         super().__init__('odrive_controller')
 
-        self.subscription_joint0 = self.create_subscription(
-            Float64MultiArray,
-            '/joint0_velocity_controller/commands',
-            self.listener_callback_joint0,
-            10)
+        self.subscription_joint0 = self.create_subscription(Float64MultiArray,'/joint0_velocity_controller/commands',self.listener_callback_joint0,10)
+        # self.subscription_joint0 = self.create_subscription(Float64MultiArray,'/joint1_velocity_controller/commands',self.listener_callback_joint1,10)
 
-        # self.subscription_joint1 = self.create_subscription(
-        #     Float64MultiArray,
-        #     '/joint1_velocity_controller/commands',
-        #     self.listener_callback_joint1,
-        #     10)
-
-        self.publisher_dubal_vel = self.create_publisher(JointState, 'dubal_vel', 10)
+        self.publisher_dubal_data = self.create_publisher(JointState, 'dubal_data', 10)
 
         self.odrv0 = odrive.find_any(serial_number=ODRIVE_SERIAL_NUMBER)
         self.check_and_clear_errors()
+
         self.odrv0.axis0.controller.config.control_mode = ControlMode.VELOCITY_CONTROL
         self.odrv0.axis0.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
         self.odrv0.axis0.config.enable_watchdog = False
-
-        # 초기 모터 각도 값을 저장할 변수
         self.initial_position = self.odrv0.axis0.encoder.pos_estimate
-
         # self.odrv0.axis1.controller.config.control_mode = ControlMode.VELOCITY_CONTROL
         # self.odrv0.axis1.requested_state = AXIS_STATE_CLOSED_LOOP_CONTROL
         # self.odrv0.axis1.config.enable_watchdog = False
 
     def check_and_clear_errors(self):
-        for axis in [self.odrv0.axis0]:  # , self.odrv0.axis1]:
+        for axis in [self.odrv0.axis0]:
             axis_error = axis.error
             motor_error = axis.motor.error
 
@@ -64,15 +53,15 @@ class ODriveController(Node):
         self.odrv0.axis0.controller.input_vel = velocity
         
         current_velocity = self.odrv0.axis0.encoder.vel_estimate
-        current_position = self.odrv0.axis0.encoder.pos_estimate - self.initial_position  # 초기값을 기준으로 보정된 각도
+        current_position = self.odrv0.axis0.encoder.pos_estimate - self.initial_position
 
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
         joint_state_msg.name = ["axis0"]
-        joint_state_msg.position = [current_position]  # 보정된 각도 설정
-        joint_state_msg.velocity = [current_velocity]  # 속도 설정
+        joint_state_msg.position = [current_position]
+        joint_state_msg.velocity = [current_velocity]
         
-        self.publisher_dubal_vel.publish(joint_state_msg)
+        self.publisher_dubal_data.publish(joint_state_msg)
 
     # def listener_callback_joint1(self, msg):
     #     hall_state = self.odrv0.axis1.encoder.hall_state
@@ -86,15 +75,15 @@ class ODriveController(Node):
     #     self.odrv0.axis1.controller.input_vel = velocity
         
     #     current_velocity = self.odrv0.axis1.encoder.vel_estimate
-    #     current_position = self.odrv0.axis1.encoder.pos_estimate - self.initial_position  # 초기값을 기준으로 보정된 각도
+    #     current_position = self.odrv0.axis1.encoder.pos_estimate - self.initial_position
 
     #     joint_state_msg = JointState()
     #     joint_state_msg.header.stamp = self.get_clock().now().to_msg()
     #     joint_state_msg.name = ["axis1"]
-    #     joint_state_msg.position = [current_position]  # 보정된 각도 설정
-    #     joint_state_msg.velocity = [current_velocity]  # 속도 설정
+    #     joint_state_msg.position = [current_position]
+    #     joint_state_msg.velocity = [current_velocity]
         
-    #     self.publisher_dubal_vel.publish(joint_state_msg)
+    #     self.publisher_dubal_data.publish(joint_state_msg)
 
 def main(args=None):
     rclpy.init(args=args)
@@ -106,7 +95,6 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     finally:
-        odrive_controller.get_logger().info("Shutting down, setting motor output to 0.")
         odrive_controller.odrv0.axis0.controller.input_vel = 0
         # odrive_controller.odrv0.axis1.controller.input_vel = 0
         

@@ -1,0 +1,30 @@
+In file included from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:2[m[K:
+[01m[K/home/ryung/Desktop/buf/src/controller/include/controller_main_function.h:[m[K In function ‘[01m[Kvoid dubal_vel_callback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/include/controller_main_function.h:64:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kdubal_vel_value[m[K’ was not declared in this scope; did you mean ‘[01m[Kdubal_vel_callback[m[K’?
+   64 |         odrive_L_vel = lowpassfilter([01;31m[Kdubal_vel_value[m[K, msg->velocity[0], 0.99);
+      |                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                      [32m[Kdubal_vel_callback[m[K
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:86:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kdubal_vel_value[m[K’ was not declared in this scope; did you mean ‘[01m[Kdubal_vel_callback[m[K’?
+   86 |         controller_input_msg.velocity[0] = [01;31m[Kdubal_vel_value[m[K;
+      |                                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                            [32m[Kdubal_vel_callback[m[K
+In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/include/controller_main.h:5[m[K,
+                 from [01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:1[m[K:
+[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:96:118:[m[K [01;31m[Kerror: [m[K‘[01m[Kdubal_pos_value[m[K’ was not declared in this scope
+   96 | eading=%f thrust=%f Connect=%f kill=%f u=%f",  computePID(0, [01;31m[Kdubal_pos_value[m[K, 0, dt, 0), ref[1], ref[3], ref[4], Motor_L_cmd);
+      |                                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+
+make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

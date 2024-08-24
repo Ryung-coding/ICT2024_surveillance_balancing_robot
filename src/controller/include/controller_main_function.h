@@ -7,32 +7,14 @@ float lowpassfilter(float filter, float data, float past_weight)
     return data * (1 - past_weight) + filter * past_weight;
 }
 
-void butterworth()
+void web_ref_update()
 {
-
-  wc = tan(M_PI * cut_off_freq_current * dt);
-  wc2 = wc*wc;
-
-  b0_2nd = (wc2) / (1 + sqrt(2)*wc + wc2);
-  b1_2nd = 2 * b0_2nd;
-  b2_2nd = b0_2nd;
-  a0_2nd = 1;
-  a1_2nd = 2 * (wc2 - 1) / (1 + sqrt(2) * wc + wc2);
-  a2_2nd = (1 - sqrt(2) * wc + wc2) / (1 + sqrt(2) * wc + wc2);
-
-
-  bw2_filtered_current_1_input[2] = imu_theta;
-
-  bw2_filtered_current_1_output[2] = b0_2nd * bw2_filtered_current_1_input[2] + b1_2nd * bw2_filtered_current_1_input[1] + b2_2nd * bw2_filtered_current_1_input[0] - a1_2nd * bw2_filtered_current_1_output[1] - a2_2nd * bw2_filtered_current_1_output[0];
-
-  bw2_filtered_current_1_output[0] = bw2_filtered_current_1_output[1];
-  bw2_filtered_current_1_output[1] = bw2_filtered_current_1_output[2];
-
-  bw2_filtered_current_1_input[0] = bw2_filtered_current_1_input[1];
-  bw2_filtered_current_1_input[1] = bw2_filtered_current_1_input[2];
-
+    ref[0]=0;
+    ref[1]=0;
+    // ref[2]=??
+    // ref[3]=??
+    // ref[4]=??
 }
-
 
 void sbus_callback(const sensor_msgs::msg::JointState::SharedPtr msg) 
 {
@@ -58,12 +40,14 @@ void sbus_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
     ref[4] = lowpassfilter(ref[4], sbus_data[4] > kill_bound ? 1 : 0, 0.0);
     if(ref[4]>0.4) isKilled=false;
     else isKilled=true;
+
+        //cmd changing
+    if(isConnected==true) web_ref_update();
 }
 
 
 void imu_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
 {   
-    //smoothing
     imu_theta = lowpassfilter(imu_theta, -msg->position[1], 0.001);                             
     imu_psi = lowpassfilter(imu_psi, -msg->position[2], 0.001);     
 
@@ -84,6 +68,14 @@ void gps_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
     hour=msg->position[8];
     minute=msg->position[9];
     second=msg->position[10];
+}
+
+void dubal_vel_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
+{       
+        odrive_L_pos = msg->position[0];
+        odrive_L_vel = lowpassfilter(odrive_L_vel, msg->velocity[0], 0.99); 
+        // odrive_R_pos = msg->position[1];
+        // odrive_R_vel = lowpassfilter(odrive_R_vel, msg->velocity[1], 0.99); 
 }
 
 
