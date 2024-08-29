@@ -1,0 +1,8 @@
+running egg_info
+creating ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info
+writing ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/PKG-INFO
+writing dependency_links to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/dependency_links.txt
+writing entry points to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/entry_points.txt
+writing requirements to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/requires.txt
+writing top-level names to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/top_level.txt
+writing manifest file '../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/SOURCES.txt'

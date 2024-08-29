@@ -1,0 +1,9 @@
+[1.208s] Invoking command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_and_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/install.log --install-scripts $base/lib/dubal_eye_and_web --single-version-externally-managed
+[1.323s] running egg_info
+[1.324s] writing ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/PKG-INFO
+[1.324s] writing dependency_links to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/dependency_links.txt
+[1.324s] writing entry points to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/entry_points.txt
+[1.324s] writing requirements to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/requires.txt
+[1.324s] writing top-level names to ../../build/dubal_eye_and_web/dubal_eye_and_web.egg-info/top_level.txt
+[1.343s] error: package directory 'dubal_eye_and_web' does not exist
+[1.354s] Invoked command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web' returned '1': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_and_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/install.log --install-scripts $base/lib/dubal_eye_and_web --single-version-externally-managed

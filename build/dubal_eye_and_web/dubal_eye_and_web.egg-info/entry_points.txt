@@ -1,0 +1,3 @@
+[console_scripts]
+sensor_subscriber = dubal_eye_and_web.main:main
+

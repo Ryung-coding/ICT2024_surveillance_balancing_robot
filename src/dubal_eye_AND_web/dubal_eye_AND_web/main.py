@@ -9,6 +9,8 @@ import numpy as np
 import pytesseract
 import time
 import re
+from datetime import datetime
+import os
 
 # data 초기값 설정
 # 서울과학기술대학교 초기 좌표 설정
@@ -20,8 +22,6 @@ data = {'Long': 127.0772, 'Lat': 37.6315, 'Alt': 50,
         'v1': 0.0, 'v2': 0.0, 'v3': 0.0,
         'SIV': 0, 'FIX': 0}
 
-
-# CameraClient 클래스 정의
 class CameraClient:
     def __init__(self, server_url, room_id):
         self.server_url = server_url
@@ -34,7 +34,7 @@ class CameraClient:
         self.sio.on('connect', self.connect)
         self.sio.on('roomJoined', self.on_room_joined)
         self.sio.on('disconnect', self.disconnect)
-
+    
     def begin(self):
         EventThread = threading.Thread(target=self.wait_for_events)
         EventThread.start()
@@ -62,11 +62,12 @@ class CameraClient:
             }
         }
         self.sio.emit('message', message)
+            
         threading.Timer(0.25, self.start_sending_SensorData, args=(data,)).start()
 
     def start_sending_ImageData(self):
         _, frame = self.cap.read()
-
+        
         _, buffer = cv2.imencode('.jpg', frame, [int(cv2.IMWRITE_JPEG_QUALITY), 90])
         image_base64 = base64.b64encode(buffer).decode('utf-8')
 
@@ -79,14 +80,15 @@ class CameraClient:
         }
 
         self.sio.emit('message', data)
+            
         threading.Timer(0.1, self.start_sending_ImageData).start()
 
-# ImageProcessor 클래스 정의
 class ImageProcessor:
     def __init__(self):
         self.isProcessing = False
         self.detect_list = []
 
+    # 이미지 전처리
     def preprocess_image(self, image):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         img_blurred = cv2.GaussianBlur(gray, ksize=(5, 5), sigmaX=0)
@@ -100,6 +102,7 @@ class ImageProcessor:
         )
         return img_blur_thresh
 
+    # 컨투어 사각형 만들기
     def find_contours(self, img_blur_thresh):
         contours, _ = cv2.findContours(
             img_blur_thresh,
@@ -123,6 +126,7 @@ class ImageProcessor:
             })
         return contours_dict
 
+    # 번호판 찾기 필터링
     def find_possible_contours(self, contours_dict):
         MIN_AREA = 80
         MIN_WIDTH, MIN_HEIGHT = 2, 8
@@ -183,13 +187,14 @@ class ImageProcessor:
 
         return matched_result_idx
 
+    # 번호판 문자 인식
     def extract_plate_text(self, plate_imgs):
         MIN_AREA = 80
         MIN_WIDTH, MIN_HEIGHT = 2, 8
         MIN_RATIO, MAX_RATIO = 0.25, 1.0
 
         plate_chars = []
-
+        
         for i, plate_img in enumerate(plate_imgs):
             plate_img = cv2.resize(plate_img, dsize=(0, 0), fx=1.6, fy=1.6)
             _, plate_img = cv2.threshold(plate_img, thresh=0.0, maxval=255.0, type=cv2.THRESH_BINARY | cv2.THRESH_OTSU)
@@ -211,6 +216,8 @@ class ImageProcessor:
                     plate_min_y = min(plate_min_y, y)
                     plate_max_x = max(plate_max_x, x + w)
                     plate_max_y = max(plate_max_y, y + h)
+            
+            
 
             img_result = plate_img[plate_min_y:plate_max_y, plate_min_x:plate_max_x]
 
@@ -218,9 +225,7 @@ class ImageProcessor:
                 img_result = cv2.GaussianBlur(img_result, ksize=(3, 3), sigmaX=0)
                 _, img_result = cv2.threshold(img_result, thresh=0.0, maxval=255.0, type=cv2.THRESH_BINARY | cv2.THRESH_OTSU)
                 img_result = cv2.copyMakeBorder(img_result, top=10, bottom=10, left=10, right=10, borderType=cv2.BORDER_CONSTANT, value=(0, 0, 0))
-
-                chars = pytesseract.image_to_string(img_result, lang='kor', config='--psm 7 --oem 0')
-
+                chars = pytesseract.image_to_string(img_result, lang='kor', config='--psm 7 --oem 3')
                 result_chars = ''.join(c for c in chars if ord('가') <= ord(c) <= ord('호') or c.isdigit())
 
                 if re.match(r"^\d{2,3}[가-호]\d{4}$", result_chars):
@@ -229,6 +234,7 @@ class ImageProcessor:
         return plate_chars
 
     def process_image(self, camera_client):
+
         ret, frame = camera_client.cap.read()
         if not ret:
             return
@@ -269,12 +275,14 @@ class ImageProcessor:
             rotation_matrix = cv2.getRotationMatrix2D(center=(plate_cx, plate_cy), angle=angle, scale=1.0)
             img_rotated = cv2.warpAffine(img_blur_thresh, M=rotation_matrix, dsize=(frame.shape[1], frame.shape[0]))
 
+            # 번호판 영역 crop
             img_cropped = cv2.getRectSubPix(
                 img_rotated,
                 patchSize=(int(plate_width), int(plate_height)),
                 center=(int(plate_cx), int(plate_cy))
             )
 
+            # 번호판 비율 범위 넘어가면 해당 이미지 무시
             if MIN_PLATE_RATIO <= img_cropped.shape[1] / img_cropped.shape[0] <= MAX_PLATE_RATIO:
                 plate_imgs.append(img_cropped)
                 plate_infos.append({
@@ -286,20 +294,41 @@ class ImageProcessor:
 
         plate_chars = self.extract_plate_text(plate_imgs)
 
+        # 번호판 영역에 라운딩박스, 텍스트 표시(뒤 4자리만)
         for info, chars in zip(plate_infos, plate_chars):
-            cv2.rectangle(frame, pt1=(info['x'], info['y']), pt2=(info['x'] + info['w'], info['y'] + info['h']), color=(255, 0, 0), thickness=2)
-            cv2.putText(frame, chars[-4:], (info['x'], info['y'] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
+            if chars not in self.detect_list:
+                self.detect_list.append(chars)
+                cv2.rectangle(frame, pt1=(info['x'], info['y']), pt2=(info['x'] + info['w'], info['y'] + info['h']), color=(255, 0, 0), thickness=2)
+                cv2.putText(frame, chars[-4:], (info['x'], info['y'] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
+
+                save_dir = os.path.expanduser("Desktop/dubal_ws/src/dubal_eye_and_web/Plates_img")
+                if not os.path.exists(save_dir):
+                    os.makedirs(save_dir)
+
+                # 파일 이름 생성
+                now = datetime.now()
+                timestamp = now.strftime('%H:%M:%S')
+                filename = f"{save_dir}/{timestamp}({len(self.detect_list)}).jpg"
+
+                # 이미지 저장
+                cv2.imwrite(filename, frame)
 
         return plate_chars
 
     def loop(self, client):
         while True:
-            start_time = time.time()
-            self.detect_list = self.process_image(client)
-            print(self.detect_list)
-            elapsed_time = time.time() - start_time
-            print(elapsed_time)
-            time.sleep(max(0, 1 - elapsed_time))
+            start_time = time.time()  # 시작 시간 기록
+            plate_lists = self.process_image(client)
+
+            if len(plate_lists) > 0:
+                data['PL_NUM'] = plate_lists[0]
+            
+            data['PL_STATE'] = len(self.detect_list)
+    
+            elapsed_time = time.time() - start_time  # 실행 시간 계산
+            if elapsed_time < 0.5:
+                time.sleep(max(0, 0.5 + start_time - time.time()))
+
 
 # GPS 데이터 콜백 함수
 def gps_callback(msg):
@@ -335,14 +364,23 @@ def main():
     node.create_subscription(JointState, 'gps_data', gps_callback, 10)
     node.create_subscription(JointState, 'imu_data', imu_callback, 10)
     node.create_subscription(JointState, 'controller_input_data', controller_callback, 10)
+    
+    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
 
+
+    image_processor = ImageProcessor()
     client = CameraClient('http://13.125.65.10:5024', 'AA:11:BB:22:CC:33')
 
     client.begin()
+
     while not client.isConnected:
         time.sleep(0.05)
 
     client.start_sending_SensorData(data)
+    client.start_sending_ImageData()
+
+    ImageThread = threading.Thread(target=image_processor.loop, args=(client,))
+    ImageThread.start()
 
     try:
         rclpy.spin(node)

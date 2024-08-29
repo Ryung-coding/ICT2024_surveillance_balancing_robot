@@ -1,0 +1,237 @@
+[1.158s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.158s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1d6f2299d0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=16, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1d6f2299d0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1d6ed36b50>)
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.214s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.215s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.215s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryung/Desktop/dubal_ws'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.215s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.221s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ignore', 'ignore_ament_install']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ignore_ament_install'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_pkg']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_pkg'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['colcon_meta']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'colcon_meta'
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extensions ['ros']
+[1.222s] Level 1:colcon.colcon_core.package_identification:_identify(src/controller) by extension 'ros'
+[1.223s] DEBUG:colcon.colcon_core.package_identification:Package 'src/controller' with type 'ros.ament_cmake' and name 'controller'
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extensions ['ignore', 'ignore_ament_install']
+[1.223s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extension 'ignore'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extension 'ignore_ament_install'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extensions ['colcon_pkg']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extension 'colcon_pkg'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extensions ['colcon_meta']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extension 'colcon_meta'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extensions ['ros']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/dubal_eye_and_web) by extension 'ros'
+[1.224s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dubal_eye_and_web' with type 'ros.ament_python' and name 'dubal_eye_and_web'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ignore', 'ignore_ament_install']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ignore_ament_install'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_pkg']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_pkg'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['colcon_meta']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'colcon_meta'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extensions ['ros']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/odrive_controller) by extension 'ros'
+[1.224s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odrive_controller' with type 'ros.ament_python' and name 'odrive_controller'
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ignore', 'ignore_ament_install']
+[1.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ignore_ament_install'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_pkg']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_pkg'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['colcon_meta']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'colcon_meta'
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extensions ['ros']
+[1.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_reciver) by extension 'ros'
+[1.225s] DEBUG:colcon.colcon_core.package_identification:Package 'src/serial_reciver' with type 'ros.ament_python' and name 'serial_reciver'
+[1.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.225s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.356s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.356s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ryung/Desktop/dubal_ws/install/controller' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.376s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/ryung/Desktop/dubal_ws/install
+[1.396s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 279 installed packages in /opt/ros/foxy
+[1.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.474s] Level 5:colcon.colcon_core.verb:set package 'controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.474s] DEBUG:colcon.colcon_core.verb:Building package 'controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/dubal_ws/build/controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/dubal_ws/install/controller', 'merge_install': False, 'path': '/home/ryung/Desktop/dubal_ws/src/controller', 'symlink_install': False, 'test_result_base': None}
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_target' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_clean_cache' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_clean_first' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'cmake_force_configure' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'ament_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'catkin_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'dubal_eye_and_web' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.494s] DEBUG:colcon.colcon_core.verb:Building package 'dubal_eye_and_web' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web', 'merge_install': False, 'path': '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web', 'symlink_install': False, 'test_result_base': None}
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_args' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.513s] Level 5:colcon.colcon_core.verb:set package 'odrive_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.513s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/dubal_ws/build/odrive_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/dubal_ws/install/odrive_controller', 'merge_install': False, 'path': '/home/ryung/Desktop/dubal_ws/src/odrive_controller', 'symlink_install': False, 'test_result_base': None}
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_args' from command line to 'None'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target' from command line to 'None'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_cache' from command line to 'False'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_clean_first' from command line to 'False'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'cmake_force_configure' from command line to 'False'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'ament_cmake_args' from command line to 'None'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_cmake_args' from command line to 'None'
+[1.532s] Level 5:colcon.colcon_core.verb:set package 'serial_reciver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.532s] DEBUG:colcon.colcon_core.verb:Building package 'serial_reciver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryung/Desktop/dubal_ws/build/serial_reciver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryung/Desktop/dubal_ws/install/serial_reciver', 'merge_install': False, 'path': '/home/ryung/Desktop/dubal_ws/src/serial_reciver', 'symlink_install': False, 'test_result_base': None}
+[1.551s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.571s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.571s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryung/Desktop/dubal_ws/src/controller' with build type 'ament_cmake'
+[1.571s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryung/Desktop/dubal_ws/src/controller'
+[1.592s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.592s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.655s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web' with build type 'ament_python'
+[1.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('dubal_eye_and_web', 'ament_prefix_path')
+[1.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/share/dubal_eye_and_web/hook/ament_prefix_path.ps1'
+[1.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/share/dubal_eye_and_web/hook/ament_prefix_path.dsv'
+[1.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/share/dubal_eye_and_web/hook/ament_prefix_path.sh'
+[1.698s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.698s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.766s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryung/Desktop/dubal_ws/src/odrive_controller' with build type 'ament_python'
+[1.767s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_controller', 'ament_prefix_path')
+[1.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.ps1'
+[1.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.dsv'
+[1.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/odrive_controller/share/odrive_controller/hook/ament_prefix_path.sh'
+[1.810s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.810s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.873s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryung/Desktop/dubal_ws/src/serial_reciver' with build type 'ament_python'
+[1.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('serial_reciver', 'ament_prefix_path')
+[1.894s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.ps1'
+[1.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.dsv'
+[1.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/serial_reciver/share/serial_reciver/hook/ament_prefix_path.sh'
+[1.916s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.916s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+[2.109s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web'
+[2.131s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.131s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.320s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryung/Desktop/dubal_ws/src/odrive_controller'
+[2.341s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.341s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.528s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryung/Desktop/dubal_ws/src/serial_reciver'
+[2.549s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.549s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.612s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/controller:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+[2.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller
+[2.639s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[2.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/controller:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller
+[2.680s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller' for CMake module files
+[2.680s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller' for CMake config files
+[2.681s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[2.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[2.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[2.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[2.704s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib'
+[2.705s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/bin'
+[2.705s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib/pkgconfig/controller.pc'
+[2.705s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib/python3.8/site-packages'
+[2.705s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/bin'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.ps1'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.dsv'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.sh'
+[2.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.bash'
+[2.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.zsh'
+[2.729s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/dubal_ws/install/controller/share/colcon-core/packages/controller)
+[2.766s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(controller)
+[2.789s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller' for CMake module files
+[2.789s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller' for CMake config files
+[2.789s] Level 1:colcon.colcon_core.shell:create_environment_hook('controller', 'cmake_prefix_path')
+[2.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.ps1'
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.dsv'
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/hook/cmake_prefix_path.sh'
+[2.812s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib'
+[2.812s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/bin'
+[2.812s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib/pkgconfig/controller.pc'
+[2.813s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/lib/python3.8/site-packages'
+[2.813s] Level 1:colcon.colcon_core.environment:checking '/home/ryung/Desktop/dubal_ws/install/controller/bin'
+[2.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.ps1'
+[2.836s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.dsv'
+[2.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.sh'
+[2.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.bash'
+[2.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.zsh'
+[2.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryung/Desktop/dubal_ws/install/controller/share/colcon-core/packages/controller)
+[2.856s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_and_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/install.log --install-scripts $base/lib/dubal_eye_and_web --single-version-externally-managed
+[2.857s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/dubal_ws/src/odrive_controller': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/odrive_controller/prefix_override:/home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ryung/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ryung/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed
+[2.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryung/Desktop/dubal_ws/src/serial_reciver': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/serial_reciver/prefix_override:/home/ryung/Desktop/dubal_ws/install/serial_reciver/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/serial_reciver build --build-base /home/ryung/Desktop/dubal_ws/build/serial_reciver/build install --record /home/ryung/Desktop/dubal_ws/build/serial_reciver/install.log --install-scripts $base/lib/serial_reciver --single-version-externally-managed
+[3.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_and_web' returned '1': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_and_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_and_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_and_web/install.log --install-scripts $base/lib/dubal_eye_and_web --single-version-externally-managed
+[3.030s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.030s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.030s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[3.030s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.054s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.054s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.054s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.067s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.087s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/dubal_ws/install/local_setup.ps1'
+[3.088s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryung/Desktop/dubal_ws/install/_local_setup_util_ps1.py'
+[3.089s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/dubal_ws/install/setup.ps1'
+[3.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/dubal_ws/install/local_setup.sh'
+[3.111s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryung/Desktop/dubal_ws/install/_local_setup_util_sh.py'
+[3.111s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/dubal_ws/install/setup.sh'
+[3.132s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/dubal_ws/install/local_setup.bash'
+[3.133s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/dubal_ws/install/setup.bash'
+[3.154s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryung/Desktop/dubal_ws/install/local_setup.zsh'
+[3.154s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryung/Desktop/dubal_ws/install/setup.zsh'
