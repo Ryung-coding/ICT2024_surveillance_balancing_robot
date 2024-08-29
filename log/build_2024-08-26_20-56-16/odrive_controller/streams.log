@@ -1,0 +1,21 @@
+[1.226s] Invoking command in '/home/ionia/Desktop/dubal_ws/src/odrive_controller': PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ionia/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed install_data
+[1.521s] running egg_info
+[1.523s] writing ../../build/odrive_controller/odrive_controller.egg-info/PKG-INFO
+[1.523s] writing dependency_links to ../../build/odrive_controller/odrive_controller.egg-info/dependency_links.txt
+[1.523s] writing entry points to ../../build/odrive_controller/odrive_controller.egg-info/entry_points.txt
+[1.523s] writing requirements to ../../build/odrive_controller/odrive_controller.egg-info/requires.txt
+[1.524s] writing top-level names to ../../build/odrive_controller/odrive_controller.egg-info/top_level.txt
+[1.575s] reading manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[1.576s] writing manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[1.577s] running build
+[1.577s] running build_py
+[1.577s] running install
+[1.578s] running install_lib
+[1.580s] running install_data
+[1.580s] running install_egg_info
+[1.583s] removing '/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info' (and everything under it)
+[1.583s] Copying ../../build/odrive_controller/odrive_controller.egg-info to /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info
+[1.584s] running install_scripts
+[1.608s] Installing odrive_controller script to /home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/odrive_controller
+[1.608s] writing list of installed files to '/home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log'
+[1.641s] Invoked command in '/home/ionia/Desktop/dubal_ws/src/odrive_controller' returned '0': PYTHONPATH=/home/ionia/Desktop/dubal_ws/build/odrive_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ionia/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ionia/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ionia/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed install_data

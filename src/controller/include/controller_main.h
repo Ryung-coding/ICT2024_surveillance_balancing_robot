@@ -7,9 +7,9 @@
 #include <std_msgs/msg/float64_multi_array.hpp>
 
 // PID Controller Gains
-float Kp[4] = {0.0023, 85.000, 0.0000, 0.0000};
-float Kd[4] = {0.0000, 10.000, 0.0000, 0.0000};
-float Ki[4] = {0.0000, 10.000, 0.0000, 0.0000};
+float Kp[4] = {-0.002, 16.50, 4.380, 0.0000};
+float Kd[4] = {0.0000, 0.330, 0.100, 0.0000};
+float Ki[4] = {-0.000005, 0.0080, 0.0000, 0.0000};
 
 
 // Control Constants
@@ -22,7 +22,7 @@ float Ki[4] = {0.0000, 10.000, 0.0000, 0.0000};
 #define leg_down_bound 1400
 #define DEADZONE_SBUS 2
 #define DEADZONE_INPUT 0
-#define Lim_INPUT 10
+#define Lim_INPUT 20
 #define anti_windup_gain 2
 
 // Math Constants
@@ -53,6 +53,7 @@ float Motor_L_cmd = 0.0;
 float Motor_R_cmd = 0.0; 
 float balancing_CMD = 0.0; 
 float heading_CMD = 0.0;
+float ref_theta = 0.0;
 float ref_theta_dot = 0.0;
 
 // Motor Commands

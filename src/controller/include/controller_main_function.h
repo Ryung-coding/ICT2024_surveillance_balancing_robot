@@ -48,10 +48,10 @@ void sbus_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
 
 void imu_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
 {   
-    imu_theta = lowpassfilter(imu_theta, -msg->position[1], 0.001);                             
+    imu_theta = lowpassfilter(imu_theta, msg->position[1], 0.001);                             
     imu_psi = lowpassfilter(imu_psi, -msg->position[2], 0.001);     
 
-    imu_theta_dot=lowpassfilter(imu_theta_dot, -msg->velocity[1], 0.001);         
+    imu_theta_dot=lowpassfilter(imu_theta_dot, msg->velocity[1], 0.001);         
     imu_psi_dot=lowpassfilter(imu_psi_dot, -msg->velocity[2], 0.001);    
 }
 

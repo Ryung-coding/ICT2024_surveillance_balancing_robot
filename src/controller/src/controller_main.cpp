@@ -4,15 +4,15 @@
 void balancing_controller()
 {
         // velocity PID | Err_velocity -> desired theta
-    float ref_theta = computePID(0, ref[1], 0, dt, 0);
+    ref_theta = computePID(0, ref[1], 0, dt, 0);
     
-        // Attitude PID | Err_theta -> desired theta_dot 
-    balancing_CMD = computePID(ref_theta, imu_theta, imu_theta_dot, dt, 1);
+	// Attitude PID | Err_theta -> desired theta_dot 
+	ref_theta_dot = computePID(ref_theta+0.1164, imu_theta, imu_theta_dot, dt, 1);
     
         // Attitude PID | Err_theta_dot -> motor Input CMD for balancing (Not working!!!!!!!!!!!!)
-    // imu_theta_ddot = lowpassfilter(imu_theta_ddot, (imu_theta_dot - imu_theta_dot_past) / dt, 0.1);  
-    // balancing_CMD = computePID(ref_theta_dot, imu_theta_ddot, imu_theta_ddot, dt, 2);
-    // imu_theta_dot_past = imu_theta_dot;
+    imu_theta_ddot = lowpassfilter(imu_theta_ddot, (imu_theta_dot - imu_theta_dot_past) / dt, 0.9);  
+    balancing_CMD = computePID(ref_theta_dot, imu_theta_dot, imu_theta_ddot, dt, 2);
+    imu_theta_dot_past = imu_theta_dot;
 }
 
 void heading_controller()
@@ -67,8 +67,12 @@ int main(int argc, char *argv[])
 
         Motor_L_cmd = balancing_CMD - heading_CMD;
         Motor_R_cmd = balancing_CMD + heading_CMD;
+		
+			//CW->CCW
+		Motor_L_cmd=-Motor_L_cmd;
+		Motor_R_cmd=-Motor_R_cmd;
 
-        // constrain
+        	// constrain
         if (abs(Motor_L_cmd) < DEADZONE_INPUT)  Motor_L_cmd = 0;
         if (abs(Motor_L_cmd) > Lim_INPUT)       Motor_L_cmd = Motor_L_cmd > 0 ? Lim_INPUT : -Lim_INPUT;
         if (abs(Motor_R_cmd) < DEADZONE_INPUT)  Motor_R_cmd = 0;
@@ -84,16 +88,16 @@ int main(int argc, char *argv[])
         auto controller_input_msg = sensor_msgs::msg::JointState();
         controller_input_msg.header.stamp = node->now();
         controller_input_msg.name = {"pitch[rad]", "yaw[rad]"};
-        controller_input_msg.velocity.resize(2);
+        controller_input_msg.position.resize(2);
         controller_input_msg.velocity.resize(2);
         controller_input_msg.position[0] = odrive_L_pos;
         controller_input_msg.position[1] = odrive_R_pos;
-        controller_input_msg.velocity[0] = odrive_L_pos;
-        controller_input_msg.velocity[0] = odrive_R_pos;
+        controller_input_msg.velocity[0] = ref_theta;
+        controller_input_msg.velocity[1] = ref_theta_dot;
 
-        RCLCPP_INFO(rclcpp::get_logger("controller"), 
-        "heading=%f thrust=%f Connect=%f kill=%f u=%f",  
-        ref[1], ref[1], ref[3], ref[4], Motor_L_cmd);
+        RCLCPP_INFO(rclcpp::get_logger("controller"), "u=%f", Motor_L_cmd); 
+        // "heading=%f thrust=%f Connect=%f kill=%f u=%f",  
+        // ref[1], ref[1], ref[3], ref[4], Motor_L_cmd);
 
             // publisher
         odrive_publisher_0->publish(odrive_msg_0);

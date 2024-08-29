@@ -1,0 +1,6 @@
+[0.042s] Invoking command in '/home/ionia/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ionia/Desktop/dubal_ws/build/controller -- -j4 -l4
+[0.359s] CMake Error: The current CMakeCache.txt directory /home/ionia/Desktop/dubal_ws/build/controller/CMakeCache.txt is different than the directory /home/ryung/Desktop/buf/build/controller where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[0.359s] CMake Error: The source directory "/home/ryung/Desktop/buf/src/controller" does not exist.
+[0.359s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.360s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.640s] Invoked command in '/home/ionia/Desktop/dubal_ws/build/controller' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ionia/Desktop/dubal_ws/install/serial_reciver:/home/ionia/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ionia/Desktop/dubal_ws/build/controller -- -j4 -l4
