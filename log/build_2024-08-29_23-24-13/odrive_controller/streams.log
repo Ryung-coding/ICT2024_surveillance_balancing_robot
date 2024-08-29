@@ -1,0 +1,21 @@
+[0.878s] Invoking command in '/home/ryung/Desktop/dubal_ws/src/odrive_controller': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/odrive_controller/prefix_override:/home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ryung/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ryung/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed
+[0.992s] running egg_info
+[0.992s] writing ../../build/odrive_controller/odrive_controller.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../../build/odrive_controller/odrive_controller.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../../build/odrive_controller/odrive_controller.egg-info/entry_points.txt
+[0.992s] writing requirements to ../../build/odrive_controller/odrive_controller.egg-info/requires.txt
+[0.992s] writing top-level names to ../../build/odrive_controller/odrive_controller.egg-info/top_level.txt
+[1.011s] reading manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[1.012s] writing manifest file '../../build/odrive_controller/odrive_controller.egg-info/SOURCES.txt'
+[1.012s] running build
+[1.012s] running build_py
+[1.012s] running install
+[1.013s] running install_lib
+[1.014s] running install_data
+[1.014s] running install_egg_info
+[1.015s] removing '/home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info' (and everything under it)
+[1.015s] Copying ../../build/odrive_controller/odrive_controller.egg-info to /home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages/odrive_controller-0.0.0-py3.8.egg-info
+[1.015s] running install_scripts
+[1.025s] Installing odrive_controller script to /home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/odrive_controller
+[1.025s] writing list of installed files to '/home/ryung/Desktop/dubal_ws/build/odrive_controller/install.log'
+[1.037s] Invoked command in '/home/ryung/Desktop/dubal_ws/src/odrive_controller' returned '0': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/odrive_controller/prefix_override:/home/ryung/Desktop/dubal_ws/install/odrive_controller/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odrive_controller build --build-base /home/ryung/Desktop/dubal_ws/build/odrive_controller/build install --record /home/ryung/Desktop/dubal_ws/build/odrive_controller/install.log --install-scripts $base/lib/odrive_controller --single-version-externally-managed

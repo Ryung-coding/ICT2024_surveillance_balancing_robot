@@ -1,0 +1,4 @@
+Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller
+Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller

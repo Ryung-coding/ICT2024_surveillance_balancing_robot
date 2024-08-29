@@ -1,7 +1,0 @@
-[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kvoid balancing_controller()[m[K’:
-[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:14:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kradians[m[K’ is not a member of ‘[01m[Kstd[m[K’
-   14 |     ref_theta=std::[01;31m[Kradians[m[K(-3); //example
-      |                    [01;31m[K^~~~~~~[m[K
-make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,6 @@
+source;share/dubal_eye_AND_web/hook/pythonpath.ps1
+source;share/dubal_eye_AND_web/hook/pythonpath.dsv
+source;share/dubal_eye_AND_web/hook/pythonpath.sh
+source;share/dubal_eye_AND_web/hook/ament_prefix_path.ps1
+source;share/dubal_eye_AND_web/hook/ament_prefix_path.dsv
+source;share/dubal_eye_AND_web/hook/ament_prefix_path.sh

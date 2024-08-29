@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/PKG-INFO
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/SOURCES.txt
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/dependency_links.txt
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/entry_points.txt
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/requires.txt
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/top_level.txt
+../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/zip-safe
+dubal_eye_AND_web/__init__.py
+dubal_eye_AND_web/camera_finder.py
+dubal_eye_AND_web/main.py
+resource/dubal_eye_AND_web
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

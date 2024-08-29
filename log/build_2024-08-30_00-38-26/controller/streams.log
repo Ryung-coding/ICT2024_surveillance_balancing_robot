@@ -1,0 +1,25 @@
+[0.456s] Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+[1.098s] [100%] Built target controller_main
+[1.099s] Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+[1.118s] Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller
+[1.123s] -- Install configuration: ""
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/lib/controller/controller_main
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller//dubal_no_eye.py
+[1.123s] -- Installing: /home/ryung/Desktop/dubal_ws/install/controller/share/controller//dubal_jjas_eye.py
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/environment/ament_prefix_path.sh
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/environment/ament_prefix_path.dsv
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/environment/path.sh
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/environment/path.dsv
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/local_setup.bash
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/local_setup.sh
+[1.123s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/local_setup.zsh
+[1.124s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/local_setup.dsv
+[1.124s] -- Installing: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.dsv
+[1.124s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/ament_index/resource_index/packages/controller
+[1.124s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/cmake/controllerConfig.cmake
+[1.124s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/cmake/controllerConfig-version.cmake
+[1.124s] -- Up-to-date: /home/ryung/Desktop/dubal_ws/install/controller/share/controller/package.xml
+[1.125s] Invoked command in '/home/ryung/Desktop/dubal_ws/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --install /home/ryung/Desktop/dubal_ws/build/controller

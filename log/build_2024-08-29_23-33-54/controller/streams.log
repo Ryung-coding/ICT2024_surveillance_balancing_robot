@@ -1,0 +1,2 @@
+[0.412s] Invoking command in '/home/ryung/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ryung/Desktop/dubal_ws/install/serial_reciver:/home/ryung/Desktop/dubal_ws/install/odrive_controller:/opt/ros/foxy /usr/bin/cmake --build /home/ryung/Desktop/dubal_ws/build/controller -- -j16 -l16
+[0.787s] [100%] Built target controller_main

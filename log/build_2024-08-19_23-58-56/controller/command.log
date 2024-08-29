@@ -1,2 +1,0 @@
-Invoking command in '/home/ionia/Desktop/dubal_ws/build/controller': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/ionia/Desktop/dubal_ws/src/controller -DCMAKE_INSTALL_PREFIX=/home/ionia/Desktop/dubal_ws/install/controller
-Invoked command in '/home/ionia/Desktop/dubal_ws/build/controller' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/ionia/Desktop/dubal_ws/src/controller -DCMAKE_INSTALL_PREFIX=/home/ionia/Desktop/dubal_ws/install/controller

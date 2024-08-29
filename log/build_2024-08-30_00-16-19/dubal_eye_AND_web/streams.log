@@ -1,0 +1,24 @@
+[1.270s] Invoking command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_AND_web': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_AND_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/install.log --install-scripts $base/lib/dubal_eye_AND_web --single-version-externally-managed
+[1.397s] running egg_info
+[1.397s] writing ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/PKG-INFO
+[1.397s] writing dependency_links to ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/dependency_links.txt
+[1.397s] writing entry points to ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/entry_points.txt
+[1.398s] writing requirements to ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/requires.txt
+[1.398s] writing top-level names to ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/top_level.txt
+[1.417s] reading manifest file '../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/SOURCES.txt'
+[1.418s] writing manifest file '../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info/SOURCES.txt'
+[1.418s] running build
+[1.418s] running build_py
+[1.419s] copying dubal_eye_AND_web/main.py -> /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/build/lib/dubal_eye_AND_web
+[1.419s] running install
+[1.419s] running install_lib
+[1.419s] copying /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/build/lib/dubal_eye_AND_web/main.py -> /home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages/dubal_eye_AND_web
+[1.419s] byte-compiling /home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages/dubal_eye_AND_web/main.py to main.cpython-38.pyc
+[1.422s] running install_data
+[1.422s] running install_egg_info
+[1.423s] removing '/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages/dubal_eye_AND_web-0.0.0-py3.8.egg-info' (and everything under it)
+[1.423s] Copying ../../build/dubal_eye_AND_web/dubal_eye_AND_web.egg-info to /home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages/dubal_eye_AND_web-0.0.0-py3.8.egg-info
+[1.424s] running install_scripts
+[1.434s] Installing sensor_subscriber script to /home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/dubal_eye_AND_web
+[1.434s] writing list of installed files to '/home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/install.log'
+[1.517s] Invoked command in '/home/ryung/Desktop/dubal_ws/src/dubal_eye_AND_web' returned '0': PYTHONPATH=/home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/prefix_override:/home/ryung/Desktop/dubal_ws/install/dubal_eye_AND_web/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/dubal_eye_AND_web build --build-base /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/build install --record /home/ryung/Desktop/dubal_ws/build/dubal_eye_AND_web/install.log --install-scripts $base/lib/dubal_eye_AND_web --single-version-externally-managed

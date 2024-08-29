@@ -1,7 +1,0 @@
-[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
-[01m[K/home/ryung/Desktop/buf/src/controller/src/controller_main.cpp:196:73:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K:[m[K’ token
-  196 |             Motor_L_cmd=(balancing_CMD - heading_CMD) > 0 ? : Lim_INPUT [01;31m[K:[m[K -Lim_INPUT;
-      |                                                                         [01;31m[K^[m[K
-make[2]: *** [CMakeFiles/controller_main.dir/build.make:63: CMakeFiles/controller_main.dir/src/controller_main.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_main.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2
