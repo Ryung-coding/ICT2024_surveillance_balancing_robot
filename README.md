@@ -1,6 +1,6 @@
 
 
-
+If you want to see more information? [💪](https://www.notion.so/ryung-lab/2024-ICT-49897feb72d244a6b8c653a46413805b)
 
 
 
@@ -8,6 +8,8 @@
 # IONIA?
 
 ![image](https://github.com/user-attachments/assets/3a742641-f8ec-4ec9-af7a-ee7ed4733eb1)
+
+video➡️ [▶️](https://www.youtube.com/watch?v=EhkPfTitYII)
 
 
  본 프로젝트는 스위스 스타트업 Ascento의 이륜 로봇을 참고하여 원격 경비 임무 수행을 위한 로봇 개발을 목표로 한다. 이 로봇은 이상 객체 및 변화 감지, 주차 차량 관리, 환경지물 탐색 등의 임무를 수행하며, 이상 상황 발생 시 관제센터로의 알림 전송 및 임무 로그에 대한 데이터베이스를 구축한다.
