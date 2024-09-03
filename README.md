@@ -1,3 +1,7 @@
+![Uploading image.png…]()
+
+
+
 ## ROS2 패키지 구조
 
 ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/ae67af3e-eddc-4d6b-8896-0d1aba652568/image.png)
@@ -12,7 +16,8 @@
 
 ## 상태공간 방정식
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/17f46891-dc73-498d-9573-dc31599b26ff/image.png)
+![image](https://github.com/user-attachments/assets/06175503-4247-47fa-8240-1782177a05ab)
+
 
 1. **역진자 모델 동역학 방정식 유도**
     
@@ -35,7 +40,8 @@
 
 ## **제어기 구조**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/0200c3e9-adc2-4be8-9484-bf429fcf78eb/image.png)
+![image](https://github.com/user-attachments/assets/d1528068-cc87-4842-9ace-cbee7332e62a)
+
 
 1. **내부 루프**
     
