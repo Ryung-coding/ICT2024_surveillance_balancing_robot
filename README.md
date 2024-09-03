@@ -7,7 +7,8 @@
 
 # IONIA?
 
-![dwdwefgvsthyserfaierauthcierwwyiu.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/6773a446-c73e-4b62-aa07-adc6dc64ffb9/dwdwefgvsthyserfaierauthcierwwyiu.jpg)
+![image](https://github.com/user-attachments/assets/3a742641-f8ec-4ec9-af7a-ee7ed4733eb1)
+
 
  본 프로젝트는 스위스 스타트업 Ascento의 이륜 로봇을 참고하여 원격 경비 임무 수행을 위한 로봇 개발을 목표로 한다. 이 로봇은 이상 객체 및 변화 감지, 주차 차량 관리, 환경지물 탐색 등의 임무를 수행하며, 이상 상황 발생 시 관제센터로의 알림 전송 및 임무 로그에 대한 데이터베이스를 구축한다.
 
@@ -27,17 +28,13 @@
 # 기능구현도
 ![image](https://github.com/user-attachments/assets/639b5e4a-447f-4b34-8a2c-9bdac871a9bb)
 
-
-![image](https://github.com/user-attachments/assets/06175503-4247-47fa-8240-1782177a05ab)
-
-
 로봇의 PC(ROS2)는 크게 3개의 thread로 구성되어 3가지 작업을 병렬로 수행한다. Control thread는 MCU, IMU로부터 로봇의 상태를 계산하고, 휠, 관절을 구동시킨다. Web thread는 로봇 상태, 이미지를 웹으로 송신하고 제어 입력을 수신한다. 이미지처리 thread는 카메라로부터 받은 이미지를 프로세싱을 거친 뒤 Web thread로 전송한다.
 
 ---
 
 ## 상태공간 방정식
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/17f46891-dc73-498d-9573-dc31599b26ff/image.png)
+![image](https://github.com/user-attachments/assets/06175503-4247-47fa-8240-1782177a05ab)
 
 ### **1. 역진자 모델 동역학 방정식 유도**
 
@@ -73,5 +70,3 @@
     
     외부 루프는 바퀴 속도를 제어하며, 이 루프는 로봇의 이동을 관리하고 전체적인 균형을 맞추는 데 주된 역할을 한다. 외부 PID 제어기는 목표로 하는 바퀴 속도와 실제 속도 간의 오차를 줄이기 위해 중간 루프의 출력을 조정한다. 바퀴 속도는 바퀴의 반지름을 곱하여 로봇의 실제 움직임 속도로 표현되며, 이는 로봇의 전진 또는 후진 속도를 나타낸다. 이를 통해 로봇의 수평 위치와 균형을 관리하며, 바퀴의 속도 조정을 통해 로봇의 기운 각도와 각속도를 제어하여 안정된 동작을 가능하게 한다.
     
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/8ef6f64b-7c1e-4bbb-b769-8d81a42e1ca9/image.png)
