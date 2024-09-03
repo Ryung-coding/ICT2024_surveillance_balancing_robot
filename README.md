@@ -1,19 +1,50 @@
-http://13.125.65.10:5022/
+## ROS2 패키지 구조
 
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/ae67af3e-eddc-4d6b-8896-0d1aba652568/image.png)
 
-# if you want ROS2 Foxy
-alias cm2='cd ~/Desktop/ros2_ws && colcon build'
-alias cs2='cd ~/Desktop/ros2_ws/src'
+| serial_reciver | 소형 MCU에서 작동되는 각종 센서들과 송수신기 신호 등을 받아오는 센싱 패키지 |
+| --- | --- |
+| odrive_controller | O-drive에 맞는 형태로 변환하여 회로에 입력하는 역할을 하는 패키지 |
+| controller | 전체 제어기를 총괄하는 패키지 |
+| dubal_eye_AND_web | 로봇의 영상처리와 웹간의 연결 통신을 담당하는 패키지 |
 
-alias cm_dubal='cd ~/Desktop/dubal_ws && colcon build'
-alias cs_dubal='cd ~/Desktop/dubal_ws/src'
-alias du='ros2 launch controller dubal_no_eye.py'
-alias du_eye='ros2 launch controller dubal_jjas_eye.py'
-alias rr='rm -rf build/ install/ log/ && cd /home/ryung/Desktop/buf/build/controller && rm CMakeCache.txt'
+---
 
-echo "ROS2 Foxy running.."
-source /opt/ros/foxy/setup.bash
+## 상태공간 방정식
 
-export ROS_DOMAIN_ID=13
-#source ~/Desktop/ros2_ws/install/setup.bash
-source ~/Desktop/dubal_ws/install/setup.bash
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/17f46891-dc73-498d-9573-dc31599b26ff/image.png)
+
+1. **역진자 모델 동역학 방정식 유도**
+    
+    이 로봇은 카트 위에 역진자 구조를 가진 형태로, 카트의 수평 위치와 로봇의 역진자에 해당하는 부분의 각도를 조절하는 힘을 통해 균형을 유지할 수 있도록 설계되었다. 운동 방정식은 로봇의 수평 운동과 회전 운동을 기술하며, 첫 번째 방정식은 카트의 수평 운동을, 두 번째 방정식은 역진자에 해당하는 로봇 부분의 회전 운동을 나타낸다. 이 방정식은 비선형 항을 포함하고 있지만, 작은 각도 근처에서 테일러 전개를 통해 선형화할 수 있다.
+    
+2. **선형화를 통한 선형상태공간방정식 유도**
+    
+    **1) 선형화의 엄밀한 유도**
+    
+    이 선형화 과정은 시스템이 균형 상태, 즉 𝜃=0 근처에서 작동할 때 유효하다고 할 수 있다. 카트의 운동 방정식에서 비선형성을 유발하는 주된 원인은 cosθ와 sinθ인데, 이 두 항은 θ의 값이 커질수록 비선형적 성질을 나타내지만, θ가 작을 때는 선형 근사가 가능하다. 테일러 전개를 사용하여 cosθ와 sinθ가 θ=0 근처에서 근사할 수 있으며, 이를 통해 cosθ는 약 1로, sinθ는 약 θ로 근사할 수 있다.
+    
+    **2) 선형화를 진행할 경우 얻는 이점**
+    
+    이러한 근사를 적용하면 비선형 방정식이 선형 형태로 변환되며, 이 과정에서 작은 θ를 가정하면 비선형 항을 무시할 수 있다. 선형화된 상태 공간 모델은 제어 이론을 적용하기에 적합하다. 이를 통해 PID 제어기, 상태 피드백 제어기, 또는 LQR 제어기와 같은 선형 제어 기법을 사용할 수 있게 하고, 로봇의 동작을 분석하고 원하는 대로 제어할 수 있다.
+    
+    그러나 이 선형 모델은 작은 각도 범위 내에서 유효하므로, 큰 각도에서의 동작을 고려할 때는 비선형 모델링 및 제어가 필요할 수 있다. 이러한 선형 근사에 의해 단순화된 모델은 제어 이론을 적용하기 쉽게 만들고, 시스템 분석과 제어기 설계에서 매우 유용하다고 할 수 있다.
+    
+
+---
+
+## **제어기 구조**
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/5928c9b4-fc01-4de3-a0d5-47b0faef430f/0200c3e9-adc2-4be8-9484-bf429fcf78eb/image.png)
+
+1. **내부 루프**
+    
+    내부 루프는 각속도를 제어하는 루프로, 역진자의 각속도를 직접 제어하는 역할을 한다. 이 루프에서는 IMU의 각속도 센서를 사용하여 각속도를 측정하고, 내부 PID 제어기를 통해 이를 기반으로 빠르게 미세 조정을 하여 역진자의 안정성을 유지할 수 있도록 한다.
+    
+2. **중간루프** 
+    
+    중간 루프는 로봇이 기운 각도를 제어하는 루프로, 이 각도는 칼만 필터를 통해 추정된 값을 사용한다. 중간 PID 제어기는 추정된 로봇이 기운 각도의 변화에 반응하여 각속도를 조정하며, 이를 통해 로봇이 목표 기운 각도를 유지하도록 돕는다.
+    
+3. **외부루프**
+    
+    외부 루프는 바퀴 속도를 제어하며, 이 루프는 로봇의 이동을 관리하고 전체적인 균형을 맞추는 데 주된 역할을 한다. 외부 PID 제어기는 목표로 하는 바퀴 속도와 실제 속도 간의 오차를 줄이기 위해 중간 루프의 출력을 조정한다. 바퀴 속도는 바퀴의 반지름을 곱하여 로봇의 실제 움직임 속도로 표현되며, 이는 로봇의 전진 또는 후진 속도를 나타낸다. 이를 통해 로봇의 수평 위치와 균형을 관리하며, 바퀴의 속도 조정을 통해 로봇의 기운 각도와 각속도를 제어하여 안정된 동작을 가능하게 한다.
